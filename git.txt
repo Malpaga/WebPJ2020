@@ -1,0 +1,22 @@
+git config --global user.name (ou email) ""
+
+mkdir folderName
+git init
+git add fileName
+git rm --cached fileName (remove)
+
+git commit -m "la raison du commit" (valider un ajout)
+git log
+
+git branch brancheName (création d'une branche)
+git branch (ensemble des branches)
+git checkout brancheName (changer de branche)
+
+valider une branche : 
+passer sur le master (git checkout master)
+ramener le travail d'une autre branche (git merge brancheName)
+possibilité de supprimer la branche (git branch -d brancheName)
+
+git remote add origin https://github.com/Sccor/WebProject.git
+git pull origin master (ramene en local)
+git push origin master (ramene sur le serveur distant)
