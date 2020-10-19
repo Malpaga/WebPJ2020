@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/header.css">
+        <link rel="stylesheet" href="public/css/hamburgers.css">   
+        <link rel="stylesheet" href="public/css/footer.css"> 
+        <link rel="stylesheet" href="public/css/artists.css"> 
+        <script defer src="public/js/script.js"></script>
+        <script src="public/js/rellax.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title class = title>OUTMOS</title>
+    </head>
+    <body >
+        <header id="h">
+        
+            <nav class="menu"> 
+
+                <div class="nav_left" id="nl">
+                        <a href="index.html" class="nav_link">Home</a>
+                        <a href="sequencer.html" class="nav_link">Let's Rock</a>
+                        <a href="artists.html" class="nav_link">Artists</a>
+                        <a href="reviews.html" class="nav_link">Reviews</a>
+                        <a href="contact.html" class="nav_link">Contact Us</a>
+                        <a href="about.html" class="nav_link">About Us</a>
+                </div>
+
+                <button class="nav_toggle hamburger hamburger--collapse" type="button" id="burg" onclick="activate()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                
+                <div class="nav_right">
+                    <h1><a href="index.html"> <img src = "public/img/outmos.png" class="image" id="logo"/></a></h1>
+                </div>
+                
+            </nav>
+
+            
+        </header> 
+        
+        <main>
+           
+            <h1 class="title">Artists</h1>
+           <div class="artists">
+                <div class="first" id="nujabes" style="background-image: url('public/img/nujabes.jpg');"> <a href="nujabes.html"> <p class="artist_text"> Nujabes </p> </a> </div>
+                <div class="first" id="shaka" style="background-image: url('public/img/shakaponk.jpg');"> <a href="shakaponk.html"> <p class="artist_text">Shakaponk</p>   </a> </div>
+                <div class="first" id="shaka" style="background-image: url('public/img/rhcp.jpg');"> <a href="rhcp.html"> <p class="artist_text">Red Hot Chili Peppers</p>   </a> </div>
+                <div class="first" id="shaka" style="background-image: url('public/img/Vulfpeck.jpg');"> <a href="vulfpeck.html"> <p class="artist_text">Vulfpeck</p>   </a> </div>
+           </div>
+
+           <a href="artists_of_the_month.html"> <h1 class="title" id="special">Artists of the month</h1></a>
+
+
+        </main>
+        <footer class = footer>
+            <div class = footer_parts>
+                <div id = pages>
+                    <h2>OUR PAGES</h2>
+                    <div id = liste_pages>
+                        <ul>
+                            <li><a href="index.html">Home page</a></li>
+                            <li><a href="sequencer.html">Let's Rock!</a></li>
+                            <li><a href="artists.html">Artists</a></li>
+                            <li><a href="artists_of_the_month.html">Artists of the month</a></li>
+                            <li><a href="reviews.html">Our reviews</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id = us>
+                    <h2>ABOUT</h2>
+                    <div id = liste_us>
+                        <ul>
+                            <li><a href="about.html">Want to know us better ?</a></li>
+                            <li><a href="credits.html">The credits</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id = sociaux>
+                    <h2>CONTACT</h2>
+                    <div id = contact>
+                        <a href="contact.html">Contact us</a>
+                        <div>
+                            <a href="https://www.facebook.com/Outmos-106783571067258"><img src = "public/img/Facebook.png" class = logos></a>
+                            <a href="https://twitter.com/Outmos1"><img src = "public/img/Twitter.png" class = logos></a>
+                            <a href="https://www.instagram.com/outmos_/"><img src = "public/img/Instagram.png" class = logos></a>
+                        </div>
+                        <ul>
+                            <li>Adress: 30/32 Avenue de la République, 94800 Villejuif.</li>
+                            <li>Phone: 01 46 77 46 77.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

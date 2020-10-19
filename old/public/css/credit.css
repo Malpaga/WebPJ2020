@@ -1,0 +1,42 @@
+.corp{
+    margin-left: 25px;
+}
+
+body{
+    background-image: linear-gradient(to right,rgb(236, 115, 87), rgb(248, 161, 141));
+}
+
+.corp h2{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.corp p{
+    margin-top: 10px;
+}
+
+.corp ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.corp li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-indent: 30px;
+    list-style: none;
+}
+
+#ham{
+    margin-bottom: 50px;
+}
+
+.corp a{
+    text-decoration: underline;
+}
+
+.corp a:hover{
+    color: #eec2b8;
+}

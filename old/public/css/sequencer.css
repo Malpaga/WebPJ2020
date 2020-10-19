@@ -1,0 +1,237 @@
+
+.seq_title{
+    margin-top: 200px;
+}
+
+#sequencer_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#sequencer_container > div{
+    margin-bottom: 40px;
+}
+
+.settings{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+.speed{
+    height: 70px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.speed p{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.speed_control{
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 20rem;
+    background-color: white;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 5px black;
+    transform: rotate(180deg);
+}
+
+input[type=range]::-moz-range-track{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.synth_line{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.synth_line button{
+    margin-left: 6px;
+    width: 30px;
+    height: 30px;
+    border-style: none;
+    border: 1px solid black;
+}
+
+
+.drum_line{
+    margin-top: 10px;
+}
+
+.seq_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    transform: translateX(-25px);
+}
+
+.text_cont{
+    width: 50px;
+    height: 700px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.drums_text, .synth_text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.drums_text{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(10px);
+}
+
+.synth_text{
+    height: 505px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: translateY(-30px);
+}
+
+.drum_line button, .synth_line button{
+    margin-left: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid black;
+    transition: all 0.1s linear;
+}
+
+button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.drum_line button{
+    background-color: rgba(228, 81, 81, 0.507);   
+}
+
+.synth_line button{
+    background-color: rgba(182, 102, 182, 0.507);
+}
+
+.drum_line button:hover{
+    background-color: rgba(228, 81, 81, 1);
+    cursor: pointer;
+}
+
+.synth_line button:hover{
+    background-color: rgba(182, 102, 182, 1);
+    background-color: rgb(136, 78, 136)
+    cursor: pointer;
+}
+
+
+.on{
+    background-color: rgb(14, 14, 98) !important;
+}
+
+.dl1 .on{
+    background-color: rgb(255, 217, 0) !important;
+}
+
+.dl2 .on{
+    background-color: rgb(255, 102, 0) !important;
+}
+
+.dl3 .on{
+    background-color: rgb(209, 1, 1) !important;
+}
+
+.current{
+    opacity: 0.5 !important;
+}
+
+.played{
+    border: 3px inset white !important;
+}
+
+.control_button{
+    border-style: none;
+    width:60px;
+    height: 60px;
+    color: black;
+    padding: 3px 6px;
+    margin: 0px 5px;
+    font-size: 150%;
+    text-align: center;
+    border-radius: 10rem;
+    box-shadow: 2px 2px 5px black;
+    transition: all 0.1s ease;
+}
+
+.control_button:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px black;
+}
+
+.control_button:active{
+    background-color: grey;
+    font-size: 140%;
+    border: 3px inset white;
+    box-shadow: 2px 2px 10px black;
+}
+
+/* canvas{
+canvas{
+    border: 1px solid black;
+}
+
+.select:hover{
+    cursor: pointer;
+}
+
+#First_player
+{
+    position: absolute;
+    
+    top:30%;
+    left:25%;
+}
+
+#Second_player
+{
+    position: absolute;
+    top:30%;
+    left:35%;
+}
+
+#Third_player
+{
+    position:absolute;
+    top:30%;
+    left:45%
+}
+
+.controls
+{
+    position: absolute;
+    top:60%;
+    left:30%;
+} */

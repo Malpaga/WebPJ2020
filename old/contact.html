@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/header.css">
+        <link rel="stylesheet" href="public/css/hamburgers.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+        <link rel="stylesheet" href="public/css/contact.css">
+        <link rel="stylesheet" href="public/css/reviews.css">
+        <script defer src="public/js/script.js"></script>
+        <script defer src="public/js/form.js"></script>
+        <script src="public/js/rellax.js"></script>
+        <title class = title>OUTMOS</title>
+    </head>
+
+    <body>
+        <header id="h">
+        
+            <nav class="menu"> 
+
+                <div class="nav_left" id="nl">
+                        <a href="index.html" class="nav_link">Home</a>
+                        <a href="sequencer.html" class="nav_link">Let's Rock</a>
+                        <a href="artists.html" class="nav_link">Artists</a>
+                        <a href="reviews.html" class="nav_link">Reviews</a>
+                        <a href="contact.html" class="nav_link">Contact Us</a>
+                        <a href="about.html" class="nav_link">About Us</a>
+                </div>
+
+                <button class="nav_toggle hamburger hamburger--collapse" type="button" id="burg" onclick="activate()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                
+                <div class="nav_right">
+                    <h1><a href="index.html"> <img src = "public/img/outmos.png" class="image" id="logo"/></a></h1>
+                </div>
+                
+            </nav>
+
+            
+        </header> 
+        
+        <main>
+            <h1 class="title">Contact us</h1>
+            <div class="subtitles">
+                <h2>You want to leave us a message or a review ?</h2>
+                <h2>You can contact us via this form! You just need to fill it in.</h2>
+                <h2>Thank you!</h2>
+            </div>
+
+            <form class="form_contact"> 
+                <div class="names">
+                    <div class="name">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="Name" placeholder="Name" required>
+                    </div>
+
+                    <div class="surname">
+                        <label for="surname"></label>
+                        <input type="text" id="surname" name="Surname" placeholder="Surname" required>
+                    </div>
+                    <div class="email">
+                        <label for="email"></label>
+                        <input type="email" id="email" name="Email" placeholder="Your e-mail" required>
+                    </div>
+                </div>  
+                    
+                    <div class="subject">
+                        <label for="subject"></label>
+                        <input type="text" id="subject" name="sname" placeholder="Subject of the e-mail">
+                    </div>
+                    <div class="message">
+                        <textarea name="message" id="message_content" cols="30" rows="10" placeholder="Type your message here..." maxlength="300"></textarea>
+                    </div>      
+            </form>
+            <div class="button_line">
+                <button type="button" id="done_button" class="d_button" onclick="submit_form();"></button>
+            </div>
+
+        </main>
+        
+        <footer class = footer>
+            <div class = footer_parts>
+                <div id = pages>
+                    <h2>OUR PAGES</h2>
+                    <div id = liste_pages>
+                        <ul>
+                            <li><a href="index.html">Home Page</a></li>
+                            <li><a href="sequencer.html">Let's Rock!</a></li>
+                            <li><a href="artists.html">Artists</a></li>
+                            <li><a href="artists_of_the_month.html">Artists of the month</a></li>
+                            <li><a href="reviews.html">Our Reviews</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id = us>
+                    <h2>ABOUT</h2>
+                    <div id = liste_us>
+                        <ul>
+                            <li><a href="about.html">Want to know us better ?</a></li>
+                            <li><a href="credits.html">The credits</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id = sociaux>
+                    <h2>CONTACT</h2>
+                    <div id = contact>
+                        <a href="contact.html">Contact us</a>
+                        <div>
+                            <a href="https://www.facebook.com/Outmos-106783571067258"><img src = "public/img/Facebook.png" class = logos></a>
+                            <a href="https://twitter.com/Outmos1"><img src = "public/img/Twitter.png" class = logos></a>
+                            <a href="https://www.instagram.com/outmos_/"><img src = "public/img/Instagram.png" class = logos></a>
+                        </div>
+                        <ul>
+                            <li>Adress: 30/32 Avenue de la République, 94800 Villejuif.</li>
+                            <li>Phone: 01 46 77 46 77.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

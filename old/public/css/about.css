@@ -1,0 +1,129 @@
+#back{
+    background-image: url("https://media-exp1.licdn.com/dms/image/C4E1BAQG_c4p0ku2B7A/company-background_10000/0?e=2159024400&v=beta&t=HTb3iabFyE462c-grTqK5YhlR3Oy0D4WJBXYrFcbbyg");
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    background-image: radial-gradient(ellipse at center,#FDD692, #EC7357);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    z-index: 4;
+}
+
+.about{
+    width: 100%;
+    padding-top: 80px;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#about img{
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.664);
+}
+
+.imgAbout{
+    width: 40%;
+    height: auto;
+}
+
+#about h3{
+    z-index: 5;
+    font-size: 350%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#about p{
+    width: 35%;
+    text-align: justify;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 120%;
+    min-width: 200px;
+}
+
+#school{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+    padding-right: 25px;
+}
+
+#project{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+#we{
+    width: 100%;
+}
+
+#Alix{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-right: 25px;
+}
+
+#Philippe{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+#Lilian{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-right: 25px;
+}
+
+#school h3{
+    margin-left: -30px;
+}
+
+#Alix h3{
+    margin-left: -200px;
+}
+
+#Lilian h3{
+    margin-left: -200px;
+}
+
+#project h3{
+    margin-right: -50px;
+}
+
+#Philippe h3{
+    margin-right: -150px;
+}
+
+
