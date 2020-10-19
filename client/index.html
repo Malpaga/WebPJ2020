@@ -1,0 +1,45 @@
+<!doctype>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mon magasin en ligne 100% bons plans</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Load Vue followed by Vue Router -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/http-vue-loader/src/httpVueLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+          <header>
+            <h1>À la bonne franquette</h1>
+            <nav>
+              <router-link id="link" to='/'><i class="fas fa-igloo"></i></router-link>
+              <router-link id="link" to='/panier'><i class="fas fa-shopping-basket"></i></router-link>
+              <router-link id="link" to='/me'><i class="fas fa-user-circle"></i></router-link>
+              <router-link id="link" to='/register'><i class="fas fa-user-plus"></i></router-link>
+              <router-link id="link" to='/login'><i class="fas fa-sign-in-alt"></i></router-link>
+              
+            </nav>
+          </header>
+          <main>
+            <router-view
+              :articles="articles"
+              :panier="panier"
+              @add-article="addArticle"
+              @delete-article="deleteArticle"
+              @update-article="updateArticle"
+              @add-to-cart="addToCart"
+              @remove-from-cart="revomeFromCart"
+              @edit-quantity="editQuantity"
+              @register-user="registerUser"
+              @log-in="logIn"
+              @pay-cart="payCart"
+            ></router-view>
+          </main>
+        </div>
+        <script src="/vue-application.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </body>
+</html>
