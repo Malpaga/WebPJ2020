@@ -1,138 +1,54 @@
 <template>
-  <div class="container">
-    <article v-for="article in articles" :key="article.id">
-      <div class="article-img">
-        <div :style="{ backgroundImage: 'url(' + article.image + ')' }">
-        </div>
+  <div>
+      <div class="welcome">
+          <h1 class="welcome-title">WELCOME ON STAGE</h1>
+          <h2 class="welcome-sub">
+              <router-link to='\sequencer' class="seq-link">Your journey starts here</router-link>
+              <router-link to='\sequencer' class="seq-arrow"><img class="arrow" src="public/img/right arrow.png"></router-link>
+          
+          </h2>
+          
       </div>
-      <div class="article-content" v-if="editingArticle.id !== article.id">
-        <div class="article-title">
-          <h2>{{ article.name }} - {{ article.price }}€</h2>
-          <div class="home-but">
-            <button @click="deleteArticle(article.id)">Supprimer</button>
-            <button @click="editArticle(article)">Modifier</button>
-            <button v-if="!isArticleInCart(article.id)" @click="addToCart(article.id)">Ajouter au panier</button>
-            <button v-else @click="removeFromCart(article.id)">Retirer du panier</button>
+      
+      <div class="spot" id="P1">
+          <div id="circle">
+              <p id = textCircle>BAND OF THE DAY </p>
+              <div id = "imgArticle"><img src = "public/img/Plus1.png" onclick="expand()"></div>
           </div>
-        </div>
-        <p>{{ article.description }}</p>
-      </div>
-      <div class="article-content" v-else>
-        <div class="article-title">
-          <h2><input type="text" v-model="editingArticle.name"> - <input type="number" v-model="editingArticle.price"></h2>
-          <div>
-            <button @click="sendEditArticle()">Valider</button>
-            <button @click="abortEditArticle()">Annuler</button>
+          <div id="art">
+              <div id ="artPhoto">
+                  <div id="article">
+                      <h2 id="title">{{title}}</h2>
+                      <p id="content">{{content}}</p>
+                  </div>
+                  <div id="ArticlePhoto" class="rellax" data-rellax-speed="-1">
+                      <img class="rellax" data-rellax-speed="0" src = public/img/EddieVedder.jpg>
+                      <p id="legende">Eddie Vedder</p>
+                  </div>
+              </div>
+              <div id="close" onclick="closing()"><img src = "public/img/Cross.png"></div>
           </div>
-        </div>
-        <p><textarea v-model="editingArticle.description"></textarea></p>
-        <input type="text" v-model="editingArticle.image" placeholder="Lien vers l'image">
+          
       </div>
-    </article>
-    <form @submit.prevent="addArticle">
-      <h2>Nouveau produit à ajouter</h2>
-      <input type="text" v-model="newArticle.name" placeholder="Nom du produit" required>
-      <input type="number" v-model="newArticle.price" placeholder="Prix" required>
-      <textarea type="text" v-model="newArticle.description" required></textarea>
-      <input type="text" v-model="newArticle.image" placeholder="Lien vers l'image">
-      <button type="submit">Ajouter</button>
-    </form>
   </div>
 </template>
 
 <script>
 module.exports = {
   props: {
-    articles: { type: Array, default: [] },
-    panier: { type: Object }
-  },
+    title: String,
+    content: String
+    },
   data () {
     return {
-      newArticle: {
-        name: '',
-        description: '',
-        image: '',
-        price: 0
-      },
-      editingArticle: {
-        id: -1,
-        name: '',
-        description: '',
-        image: '',
-        price: 0
       }
-    }
+  },
+  mounted (){
+    let script = document.createElement('script')
+      script.setAttribute('src', './../public/js/script.js')
+      document.head.appendChild(script)
   },
   methods: {
-    isArticleInCart(articleId){
-      for(let i = 0; i < this.panier.articles.length; i++){
-        if(articleId == this.panier.articles[i].id){
-          return true
-        }
-      }
-      return false
-    },
-    addArticle () {
-      this.$emit('add-article', this.newArticle)
-    },
-    deleteArticle (articleId) {
-      this.$emit('delete-article', articleId)
-    },
-    editArticle (article) {
-      this.editingArticle.id = article.id
-      this.editingArticle.name = article.name
-      this.editingArticle.description = article.description
-      this.editingArticle.image = article.image
-      this.editingArticle.price = article.price
-    },
-    sendEditArticle () {
-      this.$emit('update-article', this.editingArticle)
-      this.abortEditArticle()
-    },
-    abortEditArticle () {
-      this.editingArticle = {
-        id: -1,
-        name: '',
-        description: '',
-        image: '',
-        price: 0
-      }
-    },
-    addToCart(articleId){
-      this.$emit('add-to-cart', articleId)
-    },
-    removeFromCart(articleId){
-      this.$emit('remove-from-cart', articleId)
-    }
-  }
+  } 
 }
 </script>
-
-<style scoped>
-article {
-  display: flex;
-}
-
-.article-img {
-  flex: 1;
-}
-
-.article-img div {
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-}
-
-.article-content {
-  flex: 3;
-}
-
-.article-title {
-  display: flex;
-  justify-content: space-around;
-}
-
-textarea {
-  width: 100%;
-}
-</style>

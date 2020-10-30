@@ -1,45 +1,112 @@
-<!doctype>
-<html lang="fr">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <title>Mon magasin en ligne 100% bons plans</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- Load Vue followed by Vue Router -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/header.css">
+        <link rel="stylesheet" href="public/css/hamburgers.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+        
+        <script defer src="public/js/script.js"></script>
+        <script src="public/js/rellax.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/http-vue-loader/src/httpVueLoader.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>OUTMOS</title>
     </head>
-    <body>
+    <body id="index_body">
         <div id="app">
-          <header>
-            <h1>À la bonne franquette</h1>
-            <nav>
-              <router-link id="link" to='/'><i class="fas fa-igloo"></i></router-link>
-              <router-link id="link" to='/panier'><i class="fas fa-shopping-basket"></i></router-link>
-              <router-link id="link" to='/me'><i class="fas fa-user-circle"></i></router-link>
-              <router-link id="link" to='/register'><i class="fas fa-user-plus"></i></router-link>
-              <router-link id="link" to='/login'><i class="fas fa-sign-in-alt"></i></router-link>
-              
-            </nav>
-          </header>
-          <main>
-            <router-view
-              :articles="articles"
-              :panier="panier"
-              @add-article="addArticle"
-              @delete-article="deleteArticle"
-              @update-article="updateArticle"
-              @add-to-cart="addToCart"
-              @remove-from-cart="revomeFromCart"
-              @edit-quantity="editQuantity"
-              @register-user="registerUser"
-              @log-in="logIn"
-              @pay-cart="payCart"
-            ></router-view>
-          </main>
+            <header id="h">
+        
+                <nav class="menu"> 
+                    <div class="nav_left" id="nl">
+                            <router-link to='/' class="nav_link">Home</router-link>
+                            <router-link to='/sequencer' class="nav_link">Let's Rock</router-link>
+                            <router-link to='/artists' class="nav_link">Artists</router-link>
+                            <router-link to='/reviews' class="nav_link">Reviews</router-link>
+                            <router-link to='/contact' class="nav_link">Contact Us</router-link>
+                            <router-link to='/about' class="nav_link">About Us</router-link>
+                    </div>
+    
+                    <button class="nav_toggle hamburger hamburger--collapse" type="button" id="burg" onclick="activate()">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    
+                    <div class="nav_right">
+                        <h1><router-link to='/'> <div class="logo"><img  src = "public/img/outmos.png" class="image" /></div></router-link></h1>
+                    </div>
+                    
+                </nav>
+    
+    
+            </header> 
+            
+            <main>
+                <router-view
+                    :title="title"
+                    :content="content"
+                    @add-article="addArticle"
+                    @delete-article="deleteArticle"
+                    @update-article="updateArticle"
+                    @add-to-cart="addToCart"
+                    @remove-from-cart="revomeFromCart"
+                    @edit-quantity="editQuantity"
+                    @register-user="registerUser"
+                    @log-in="logIn"
+                    @pay-cart="payCart"
+                ></router-view>
+            </main>
+            
+            <footer class = footer>
+                <div class = footer_parts>
+                    <div id = pages>
+                        <h2>OUR PAGES</h2>
+                        <div id = liste_pages>
+                            <ul>
+                                <li><router-link to='/' href="index.html">Home page</router-link></li>
+                                <li><router-link to='/sequencer' href="sequencer.html">Let's Rock!</router-link></li>
+                                <li><router-link to='/artists' href="artists.html">Artists</router-link></li>
+                                <li><router-link to='/month-artist' href="artists_of_the_month.html">Artists of the month</router-link></li>
+                                <li><router-link to='/reviews' href="reviews.html">Our reviews</router-link></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id = us>
+                        <h2>ABOUT</h2>
+                        <div id = liste_us>
+                            <ul>
+                                <li><router-link to='/about' href="about.html">Want to know us better ?</router-link></li>
+                                <li><router-link to='/credits' href="credits.html">The credits</router-link></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id = sociaux>
+                        <h2>CONTACT</h2>
+                        <div id = contact>
+                            <router-link to='/contact' href="contact.html">Contact us</router-link>
+                            <div>
+                                <a href="https://www.facebook.com/Outmos-106783571067258"><img src = "public/img/Facebook.png" class = logos></a>
+                                <a href="https://twitter.com/Outmos1"><img src = "public/img/Twitter.png" class = logos></a>
+                                <a href="https://www.instagram.com/outmos_/"><img src = "public/img/Instagram.png" class = logos></a>
+                            </div>
+                            <ul>
+                                <li>Adress: 30/32 Avenue de la République, 94800 Villejuif.</li>
+                                <li>Phone: 01 46 77 46 77.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
         </div>
         <script src="/vue-application.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
     </body>
+    
 </html>

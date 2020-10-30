@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+
+@font-face{
+    font-family: 'LemonMilk';
+    src: url("public/fonts/LEMONMILK-Light.otf");
+
+}
+
+*{
+    font-family:Lato;
+    font-weight: 400;
+    text-decoration : none;
+    color : rgba(223, 249, 251,1.0);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+}
+
+main{
+    min-height: 100%;
+    
+}
+
+#index_body{
+    background-image: url("https://images6.alphacoders.com/478/478918.jpg");
+}
+
+body{
+    background:  #EC7357;
+    background-image: linear-gradient(to right, rgb(250, 145, 121) ,rgb(236, 115, 87));
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 500%;
+    text-shadow: 1px 1px 2px black;
+}
+
+.title{
+    margin: 150px auto;
+    font-size: 4vw;
+}
+
+.welcome-title{
+    font-weight: 300;
+    font-size: 70px;
+    margin-bottom: 70px;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 150%;
+}
+
+.welcome{
+    padding-top: 10%;
+    margin-top: 150px;
+    margin-bottom: 700px;
+    
+    text-align: center;  
+}
+
+.seq-arrow{
+    display: none;
+}
+
+.seq-link{
+    padding: 20px;
+    background-image: linear-gradient(to right, rgba(83, 92, 104, 0.6) 50%, rgba(249, 202, 36, 0.6) 50%);
+    background-size: 200%;
+    border-radius: 10rem;
+    transition: background-position 1s ease-in-out;
+}
+  
+.seq-link:hover{
+    background-position: -100%;
+}
+
+h3{    
+    font-size: 500%;
+}
+
+.spot{
+    width: 100%;
+    padding-top: 80px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#P1{
+    flex-direction: column;
+    color: white;
+    
+    background-image: url('https://wallpaperaccess.com/full/1403827.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.spot_title{
+    text-shadow: 0px 0px 5px #000000;
+    padding-bottom: 80px;
+}
+
+h1{
+    margin: auto;
+}
+
+h2{
+    padding-top: 1%;
+}
+
+#circle{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width:500px;
+    height:500px;
+    top:0px;
+    left:-50%;
+    background:rgb(236, 115, 87);
+    opacity: 0.8;
+    border-radius:50%;
+    transition:all 1s ease-in-out;
+}
+
+#circle.active{
+    position: relative;
+    width:5000px;
+    height: 5000px;
+    top: 50%;
+    left:50%;
+    margin-left:-1000px;
+    margin-top:-1000px;
+    opacity: 1;
+    transition:all 1s ease-in-out;
+}
+
+#ArticlePJ{
+    z-index:4;
+    transition:all 0.5s;
+    transition-delay: 1s; 
+}
+
+#textCircle{
+    margin-top : 45%;
+    margin-left: 45%;
+    color: black;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+#imgArticle img{
+    z-index: 10;
+    position: relative;
+    top: 30px;
+    left: 330px;
+    width: 25px;
+    height: auto;
+}
+
+#imgArticle img:hover, #close:hover{
+    cursor: pointer;
+}
+
+#circle.active:hover, #ArticlePJ:hover, #textCircle:hover, .circle:hover{
+    cursor: default;
+}
+
+#close{
+    z-index: 4;
+    position: relative;
+    padding: 20px 0px;
+}
+
+#close img{
+    width: 30px;
+    height: 30px;
+}
+
+#art{
+    display: none;
+    align-self: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ArticlePhoto{
+    z-index: 4;
+    width: 30%;
+    height: 30vw;
+    margin-right: 50px;
+    background-color: #FDD692;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.664);
+}
+
+#ArticlePhoto img{
+    height: 70%;
+    width: auto;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.664);
+}
+
+#legende{
+    color: #754F44;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+#art h2{
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    font-size: 350%;
+    text-shadow: 5px 10px 20px black;
+}
+
+#artPhoto{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#ArticlePJ{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 110%;
+    text-align: justify;
+    text-indent: 5%;
+}
+
+#article{
+    width: 50%;
+}
+
+
+
+@media only screen and (max-width: 1050px){
+    .seq-link{
+        display: none;
+    }
+    .seq-arrow{
+        display: flex;
+        margin: auto;
+        width: 100px;
+        padding: 20px;
+        background-image: linear-gradient(to right, rgba(83, 92, 104, 0.6) 50%, rgba(249, 202, 36, 0.6) 50%);
+        background-size: 200%;
+        border-radius: 10rem;
+        transition: background-position 1s ease-in-out;
+    }
+    .seq-arrow:hover{
+        background-position: -100%;
+    }
+}
+
+.quickinfos
+{
+    margin:auto;
+    margin-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid white;
+    display: flex;
+
+    width: 70%; 
+    justify-content: space-around;
+    
+}
+
+
+
+.infos
+{
+    display:flex;
+    
+    font-size: large;
+    flex-wrap: nowrap;
+    
+
+}
+
+
+.bandphoto
+{
+    text-align: center;
+    
+   
+}
+
+.Bio1
+{
+    margin-top: 2%;
+    margin-left: 8%;   
+    font-size: 250%;
+    margin-bottom: 2%;
+}
+
+.Bio2
+{
+    
+    font-size: large;
+    margin:auto;
+    padding-bottom: 2% ;
+    width: 70%;
+    
+}
+
+#Vulfpeck
+{
+    margin-bottom: 2%;
+    height: 300px;
+    line-height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position:center;           
+}
+
+.Bio
+{
+    width:90%;
+    margin:auto;
+}
+
+.album
+{
+    margin:auto;
+    margin-left: 10%;
+    display:flex;
+    padding-left: 8%;
+    border-left: 2px solid white;
+}
+
+.albumphoto
+{
+    max-height: 300px;
+    min-height: 100px;
+    margin-bottom: 2%;
+}
+
+.albumtext
+{
+    font-size:2vw;
+    margin: auto;
+    margin-top: 8%;
+    justify-content: center;
+}
+
+
+#special
+{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    
+    text-shadow: none;
+    transition: 0.2s;
+}
+
+#special:hover
+{
+    color: #EC7357;
+    background-color: white;
+}
+
+.artists
+{
+    margin-top: 100px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;   
+    margin-bottom: 5%;
+    justify-content: center;
+}
+
+.first{
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 400px;
+    background-position: center;
+    width: 800px;
+    transition: 0.5s;
+}
+
+
+.first:hover
+{
+    box-shadow: inset 0px 0px 300px 0px rgba(0,0,0,1);
+    font-size: 110%;
+}
+
+
+.artist_text
+{
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    width: 100%;
+    line-height: 380px;
+    font-size: 250%;
+    transition: all 0.3s linear;
+}

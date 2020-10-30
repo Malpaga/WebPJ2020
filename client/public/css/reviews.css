@@ -1,0 +1,297 @@
+#bannière{
+    background-image: url("https://www.mysoundbattle.com/wp-content/uploads/2013/12/foule-en-concert.jpg");
+}
+
+.rev_main{
+    margin: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.review{
+    width: 510px;
+    height: auto;
+    background: white;
+    border-radius: 2rem;
+    margin: 50px 50px;
+    box-shadow: 5px 10px 20px black;
+    transition: all 1s ease-in-out;
+}
+
+
+.picture{
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    box-shadow: 5px 5px 10px black;
+    margin-top: -40px;
+    margin-left: -15px;
+    border-radius: 50%;
+}
+
+.rev_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 0;
+    top: -80px !important;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    text-align: right;
+    padding: 0 10px;
+    
+}
+
+.rev_box .rev_name{
+    margin-right: 10%;
+    width: 80%;
+    align-self: flex-end;
+    color: black;
+    font-weight: 600;
+    font-size: 150%;
+    text-align: right;
+    text-shadow: 0 0 10px white;
+}
+
+.rev_box .t_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 10%;
+    color: black;
+    font-size: 120%;
+    text-align: right;
+}
+
+.t_content .date, .t_content .text{
+    color: black;
+}
+
+.t_content .date{
+    font-size: 70%;
+    margin-right: 10px;
+}
+
+.rev_box .score{
+    display: flex;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+.rev_box .score .outof100{
+    color: black;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 110%;
+    font-weight: 700;
+}
+
+
+.rev_box .rating{
+    width: 60%;
+    color: black;
+    text-align: start;
+    transition: all 1s ease-in-out;
+}
+
+.meter { 
+	height: 25px;
+	position: relative;
+	background: #555;
+	border-radius: 25px;
+	padding: 5px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter span {
+    display: block;
+    height: 100%;
+    font-size: small;
+    text-align: center;
+    color: black;
+    line-height: 13px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: inset 0 2px 9px  rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.green span{
+    background-color: #12f712;
+}
+
+.orange span {
+    background-color: #ee781e;
+}
+
+.red span {
+    background-color: #f31111;
+}
+
+input, textarea{
+    color: black;
+    padding: 8px;
+    border-radius: 1rem;
+    border-style: none;
+    box-shadow: 1px 1px 10px black;
+}
+
+.rev_form{
+    color: black;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 20px;
+}
+
+.rev_form h4{
+    font-size: 200%;
+    margin: 20px;
+}
+
+.add_review{
+    height: 500px;
+    width: 80vw;
+    max-width: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#rev_cont{
+    width: 90%;
+}
+
+.names{
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.image_input{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.image_input input{
+    box-shadow: none;
+    width: auto;
+}
+
+.rating_input{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.rating_input label{
+    margin-bottom: 20px;
+}
+
+.select_range{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type=range]::-moz-range-track{
+    
+    background-color: #EC7357;
+
+}
+
+.button_line{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.d_button{
+    transform-origin: 50% 50%;
+    color: white;
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.d_button:hover{
+    color: #EC7357;
+    background: white;
+}
+
+.d_button:active{
+    letter-spacing: 2px;
+}
+
+
+.d_button:after{
+    content: "SUBMIT";
+}
+
+.clicked{
+    width: 40px;
+    border-color: transparent;
+    border-width: 3px;
+    font-size: 0;
+    
+    border-left-color: white;
+    animation: rotating 2s 0.2s linear infinite;
+}
+
+.clicked:after{
+    content: "";
+}
+
+.clicked:hover{
+    background: none;
+    cursor: default;
+}
+
+.done{
+    font-size: 12px;
+    color: #EC7357;
+    border: none;
+    background: white;
+}
+
+.done:after{
+    content: "done !";
+}
+
+.done:hover{
+    cursor: default;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+

@@ -1,0 +1,72 @@
+.footer{
+    background-color: #754F44;
+    opacity: 0.8;
+}
+
+.footer_parts{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#pages{
+    width: 33%;
+    
+}
+
+footer a:hover{
+    cursor: pointer;
+}
+
+#liste_pages{
+    margin-top: 3%;
+}
+
+#us{
+    width: 33%;
+}
+
+#sociaux{
+    width: 34%;
+}
+
+.logos{
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 10%;
+    border-radius: 5px;
+}
+
+#contact{
+    margin-top: 3%;
+}
+
+#liste_us{
+    margin-top: 3%;
+}
+
+#liste_us ul, #liste_pages ul, #contact ul{
+    list-style: none;
+}
+
+#liste_us li, #liste_pages li, #contact li{
+    margin-top: 5%;
+}
+
+#liste_us a:hover{
+    color: rgba(149, 175, 192,1.0);
+}
+
+#liste_pages a:hover{
+    color: rgba(149, 175, 192,1.0);
+}
+
+#contact a:hover{
+    color: rgba(149, 175, 192,1.0);
+}
+
+
+
