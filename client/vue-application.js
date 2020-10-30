@@ -23,8 +23,6 @@ var app = new Vue({
   router,
   el: '#app',
   data: {
-    title="Pearl Jam",
-    content="A group"
   },
   mounted () {
   },

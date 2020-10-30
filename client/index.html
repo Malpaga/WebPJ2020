@@ -47,19 +47,7 @@
             </header> 
             
             <main>
-                <router-view
-                    :title="title"
-                    :content="content"
-                    @add-article="addArticle"
-                    @delete-article="deleteArticle"
-                    @update-article="updateArticle"
-                    @add-to-cart="addToCart"
-                    @remove-from-cart="revomeFromCart"
-                    @edit-quantity="editQuantity"
-                    @register-user="registerUser"
-                    @log-in="logIn"
-                    @pay-cart="payCart"
-                ></router-view>
+                <router-view></router-view>
             </main>
             
             <footer class = footer>

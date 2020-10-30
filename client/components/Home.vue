@@ -3,8 +3,8 @@
       <div class="welcome">
           <h1 class="welcome-title">WELCOME ON STAGE</h1>
           <h2 class="welcome-sub">
-              <router-link to='\sequencer' class="seq-link">Your journey starts here</router-link>
-              <router-link to='\sequencer' class="seq-arrow"><img class="arrow" src="public/img/right arrow.png"></router-link>
+              <router-link to='/sequencer' class="seq-link">Your journey starts here</router-link>
+              <router-link to='/sequencer' class="seq-arrow"><img class="arrow" src="public/img/right arrow.png"></router-link>
           
           </h2>
           
@@ -18,8 +18,8 @@
           <div id="art">
               <div id ="artPhoto">
                   <div id="article">
-                      <h2 id="title">{{title}}</h2>
-                      <p id="content">{{content}}</p>
+                      <h2 id="title">Pearl Jam</h2>
+                      <p id="content">Content</p>
                   </div>
                   <div id="ArticlePhoto" class="rellax" data-rellax-speed="-1">
                       <img class="rellax" data-rellax-speed="0" src = public/img/EddieVedder.jpg>
@@ -36,8 +36,6 @@
 <script>
 module.exports = {
   props: {
-    title: String,
-    content: String
     },
   data () {
     return {

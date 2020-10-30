@@ -57,7 +57,7 @@
 
 
 <script>
-
+require('./../public/js/sequencer.js')
 module.exports = {
   props: {
   },
@@ -66,15 +66,11 @@ module.exports = {
       
     }
   },
-  mounted () {
-      let sequencerScript = document.createElement('script')
-      sequencerScript.setAttribute('src', './../public/js/sequencer.js')
-      document.head.appendChild(sequencerScript)
-  },
   methods: {
     
   }
 }
+
 </script>
 
 <style scoped src="./../public/css/sequencer.css">
