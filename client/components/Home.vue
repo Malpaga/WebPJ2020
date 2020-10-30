@@ -36,8 +36,6 @@
 <script>
 module.exports = {
   props: {
-    title: String,
-    content: String
     },
   data () {
     return {
@@ -47,8 +45,10 @@ module.exports = {
     let script = document.createElement('script')
       script.setAttribute('src', './../public/js/script.js')
       document.head.appendChild(script)
+    
   },
   methods: {
+
   } 
 }
 </script>
