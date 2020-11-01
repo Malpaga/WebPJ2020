@@ -20,7 +20,7 @@ const client = new Client({
  user: 'postgres',
  host: 'localhost',
  password: 'azertyuiop',
- database: 'TP5'
+ database: 'WebProject'
 })
 
 client.connect()
@@ -213,9 +213,26 @@ router.delete('/panier/:articleId', (req, res) => {
 /**
  * Cette route envoie l'intégralité des articles du site
  */
-router.get('/articles', (req, res) => {
-  console.log(req.session.userId)
-  res.json(articles)
+router.get('/reviews', async (req, res) => {
+  
+  var sql = "SELECT * FROM reviews"
+  var result = await client.query({
+    text: sql
+  })
+  res.json(result.rows)
+})
+
+router.post('/reviews', async (req, res) => {
+
+  var review = req.body
+  sql = 'INSERT INTO reviews (artist, album, content, image, rating, date) VALUES ($1, $2, $3, $4, $5, $6)'
+  result = await client.query({
+    text: sql,
+    values: [review.artist, review.album, review.content, review.image, review.rating, review.date]
+  })
+
+  res.status(200)
+
 })
 
 /**
