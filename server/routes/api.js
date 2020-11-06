@@ -19,7 +19,7 @@ var userId = undefined
 const client = new Client({
  user: 'postgres',
  host: 'localhost',
- password: 'azertyuiop',
+ password: 'reglisse02',
  database: 'WebProject'
 })
 
@@ -233,6 +233,20 @@ router.post('/reviews', async (req, res) => {
 
   res.status(200)
 
+})
+
+router.get('/artists/:artistId', async (req, res) => {
+  const result = await client.query({
+    text : "SELECT * FROM artists WHERE id=$1",
+    values : [req.params.artistId]
+  })
+})
+
+router.get('/artists', async (req, res) => {
+    const result = await client.query({
+      text : "SELECT * FROM artists"
+    })
+    res.status(200).json(result.rows)
 })
 
 /**

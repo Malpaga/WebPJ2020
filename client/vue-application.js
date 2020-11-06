@@ -1,6 +1,7 @@
 const Home = window.httpVueLoader('./components/Home.vue')
 const Sequencer = window.httpVueLoader('./components/Sequencer.vue')
 const Artists = window.httpVueLoader('./components/Artists.vue')
+const Artist = window.httpVueLoader('./components/Artist.vue')
 const Reviews = window.httpVueLoader('./components/Reviews.vue')
 const Login = window.httpVueLoader('./components/Login.vue')
 const Contact = window.httpVueLoader('./components/Contact.vue')
@@ -11,6 +12,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/sequencer', component: Sequencer },
   { path: '/artists', component: Artists},
+  { path: '/artist/:artistId', component: Artist},
   { path: '/reviews', component: Reviews},
   { path: '/login', component: Login},
   { path: '/about', component: About},
@@ -36,6 +38,11 @@ var app = new Vue({
   async mounted () {
     const res = await axios.get('/api/reviews')
     this.reviews = res.data
+    const art = await axios.get('/api/artists')
+    this.artists = art.data
+    console.log("HEEEEEEE")
+    console.log(this.artists)
+
     for (let index = 0; index < this.reviews.length; index++) {
       var d = new Date(this.reviews[index].date)
       this.reviews[index].date = d.toLocaleDateString({

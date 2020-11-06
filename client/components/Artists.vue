@@ -2,12 +2,13 @@
 <div>
   <h1 class="title">Artists</h1>
   <div class="artists">
-    <!-- à changer en v-for quand les artistes auront été mis dans la BDD -->
+    <div class="first" v-for="artist in artists" :key="artist.id" id="artist" :style="{ backgroundImage: 'url(' + artist.image + ')' }">
+      <!-- <router-link to="artist/${artist.id}"> <p class="artist_text"> {{artist.name}} </p></router-link> -->
+      <!-- <router-link :to="{​​​​​name: 'artist', params: {​​​​​ artistId: artist.id }​​​​​}​​​​​"><p class="artist_text"> {{artist.name}} </p></router-link> -->
+      <!-- <router-link :to="{ name: 'artist', params: {artistId: artist.id }}"><p class="artist_text"> {{artist.name}} </p></router-link> -->
+      <router-link :to="{path: '/artist/' + artist.id}"><p class="artist_text"> {{artist.name}} </p></router-link>
 
-      <div class="first" id="nujabes" style="background-image: url('public/img/nujabes.jpg');"> <router-link to="/nujabes"> <p class="artist_text"> Nujabes </p> </router-link> </div>
-      <div class="first" id="shaka" style="background-image: url('public/img/shakaponk.jpg');"> <router-link to="/shakaponk"> <p class="artist_text">Shakaponk</p>   </router-link> </div>
-      <div class="first" id="rhcp" style="background-image: url('public/img/rhcp.jpg');"> <router-link to="/rhcp"> <p class="artist_text">Red Hot Chili Peppers</p>   </router-link> </div>
-      <div class="first" id="vulfpeck" style="background-image: url('public/img/Vulfpeck.jpg');"> <router-link to="/vulfpeck"> <p class="artist_text">Vulfpeck</p>   </router-link> </div>
+    </div>
   </div>
 
   <router-link to="/artists_of_the_month"> <h1 class="title" id="special">Artists of the month</h1></router-link>
@@ -17,6 +18,7 @@
 <script>
 module.exports = {
   props: {
+    artists: Array
     },
   data () {
     return {
@@ -25,8 +27,7 @@ module.exports = {
   async mounted (){
     let bg = document.getElementById('index_body')
     bg.style.backgroundColor = '#EC7357'
-    bg.style.backgroundImage = 'none' 
-    // Rajouter le get des artistes quand BDD faite
+    bg.style.backgroundImage = 'none'
   },
   methods: {
 

@@ -11,10 +11,10 @@
           </P>
       </div>
       <div id="we">
-          <div id="Alix">
+          <div id="Stan">
               <div class="imgAbout" ><img src = "public/img/Stan.jpg"></div>
               <h3 class="rellax" data-rellax-speed="0.5">Stan Méline</h3>
-              <p>I'm a third year student at Efrei Paris. I am passionated by music and play a guitar since 2010.
+              <p>I'm a third year student at Efrei Paris. I am passionated by music and play the guitar since 2010.
               </p>
           </div>
           <div id="Philippe">

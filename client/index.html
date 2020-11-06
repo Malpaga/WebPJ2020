@@ -49,6 +49,7 @@
             
             <main>
                 <router-view
+                    :artists="artists"
                     :reviews="reviews"
                     @submit-review="addReview"
                 ></router-view>
