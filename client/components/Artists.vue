@@ -3,11 +3,7 @@
   <h1 class="title">Artists</h1>
   <div class="artists">
     <div class="first" v-for="artist in artists" :key="artist.id" id="artist" :style="{ backgroundImage: 'url(' + artist.image + ')' }">
-      <!-- <router-link to="artist/${artist.id}"> <p class="artist_text"> {{artist.name}} </p></router-link> -->
-      <!-- <router-link :to="{​​​​​name: 'artist', params: {​​​​​ artistId: artist.id }​​​​​}​​​​​"><p class="artist_text"> {{artist.name}} </p></router-link> -->
-      <!-- <router-link :to="{ name: 'artist', params: {artistId: artist.id }}"><p class="artist_text"> {{artist.name}} </p></router-link> -->
       <router-link :to="{path: '/artist/' + artist.id}"><p class="artist_text"> {{artist.name}} </p></router-link>
-
     </div>
   </div>
 
