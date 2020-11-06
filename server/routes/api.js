@@ -219,6 +219,7 @@ router.get('/reviews', async (req, res) => {
   var result = await client.query({
     text: sql
   })
+  console.log(result)
   res.json(result.rows)
 })
 
