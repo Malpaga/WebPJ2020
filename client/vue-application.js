@@ -31,9 +31,9 @@ var app = new Vue({
     reviews: [],
     artists: [],
     harttitle: "Pearl Jam",
-    hartcontent: "",
-    hartimage: String,
-    hartcaption: String
+    hartcontent: "A group",
+    hartimage: "https://upload.wikimedia.org/wikipedia/commons/5/5b/EddieVedder.jpg",
+    hartcaption: "Eddie Vedder"
   },
   async mounted () {
     const res = await axios.get('/api/reviews')
@@ -55,9 +55,7 @@ var app = new Vue({
   methods: {
     async addReview(newReview){
       const res = await axios.post('/api/reviews', newReview)
-      console.log(this.reviews)
       this.reviews.push(newReview)
-      console.log(this.reviews)
     }
   }
 })

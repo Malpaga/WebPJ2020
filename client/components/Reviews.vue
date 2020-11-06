@@ -27,7 +27,6 @@
     <div class="rev_form">
 
         <h4>Want to leave a review?</h4>
-        <!-- A changer (comme dans TP5) pour ajouter à la BDD lorsque le form est submit -->
         <form class="add_review" @submit.prevent="submitReview">
             <div class="names">
 
