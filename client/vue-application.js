@@ -28,6 +28,10 @@ var app = new Vue({
   data: {
     reviews: [],
     artists: [],
+    harttitle: "Pearl Jam",
+    hartcontent: "",
+    hartimage: String,
+    hartcaption: String
   },
   async mounted () {
     const res = await axios.get('/api/reviews')

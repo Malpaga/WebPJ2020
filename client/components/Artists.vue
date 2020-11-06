@@ -23,6 +23,9 @@ module.exports = {
       }
   },
   async mounted (){
+    let bg = document.getElementById('index_body')
+    bg.style.backgroundColor = '#EC7357'
+    bg.style.backgroundImage = 'none' 
     // Rajouter le get des artistes quand BDD faite
   },
   methods: {

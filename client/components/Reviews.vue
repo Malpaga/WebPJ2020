@@ -84,7 +84,8 @@ module.exports = {
       }
   },
   mounted (){
-    
+    let bg = document.getElementById('index_body')
+    bg.style.backgroundImage = 'url("https://www.mysoundbattle.com/wp-content/uploads/2013/12/foule-en-concert.jpg")'
   },
   methods: {
       submitReview(){
@@ -94,6 +95,6 @@ module.exports = {
 }
 </script>
 
-<style scoped src="./../public/css/reviews.css">
+<style src="./../public/css/reviews.css">
 
 </style>

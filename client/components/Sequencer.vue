@@ -68,7 +68,10 @@ module.exports = {
     }
   },
   mounted () {
-      this.initSequencer()  
+    this.initSequencer()
+    let bg = document.getElementById('index_body')
+    bg.style.backgroundColor = '#EC7357'
+    bg.style.backgroundImage = 'none'  
   },
   methods: {
     initSequencer() {
