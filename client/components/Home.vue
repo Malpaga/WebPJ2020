@@ -18,12 +18,12 @@
           <div id="art">
               <div id ="artPhoto">
                   <div id="article">
-                      <h2 id="title">Pearl Jam</h2>
-                      <p id="content">Content</p>
+                      <h2 id="title">{{harttitle}}</h2>
+                      <p id="content">{{hartcontent}}</p>
                   </div>
                   <div id="ArticlePhoto" class="rellax" data-rellax-speed="-1">
-                      <img class="rellax" data-rellax-speed="0" src = public/img/EddieVedder.jpg>
-                      <p id="legende">Eddie Vedder</p>
+                      <img class="rellax" data-rellax-speed="0" :src="hartimage">
+                      <p id="legende">{{hartcaption}}</p>
                   </div>
               </div>
               <div id="close" onclick="closing()"><img src = "public/img/Cross.png"></div>
@@ -36,6 +36,10 @@
 <script>
 module.exports = {
   props: {
+      harttitle: String,
+      hartcontent: String,
+      hartimage: String,
+      hartcaption: String
     },
   data () {
     return {
@@ -43,12 +47,16 @@ module.exports = {
   },
   mounted (){
     let script = document.createElement('script')
-      script.setAttribute('src', './../public/js/script.js')
-      document.head.appendChild(script)
-    
+    script.setAttribute('src', './../public/js/script.js')
+    document.head.appendChild(script)
+    let bg = document.getElementById('index_body')
+    bg.style.backgroundImage = 'url("https://images6.alphacoders.com/478/478918.jpg")'
   },
   methods: {
 
   } 
 }
 </script>
+
+<style>
+</style>

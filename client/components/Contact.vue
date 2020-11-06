@@ -47,6 +47,9 @@ module.exports = {
       }
   },
   mounted (){
+    let bg = document.getElementById('index_body')
+    bg.style.backgroundColor = '#EC7357'
+    bg.style.backgroundImage = 'none' 
   },
   methods: {
 
