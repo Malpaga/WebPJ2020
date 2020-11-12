@@ -71,7 +71,7 @@ module.exports = {
     const seq = document.createElement("script");
     seq.setAttribute(
       "src",
-      "../public/js/sequencer.js"
+      "/js/sequencer.js"
     );
     seq.async = true;
     document.head.appendChild(seq);
@@ -86,5 +86,5 @@ module.exports = {
 
 
 
-<style scoped src="./../public/css/sequencer.css">
+<style scoped src="/css/sequencer.css">
 </style>

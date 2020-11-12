@@ -47,6 +47,6 @@ module.exports = {
 }
 </script>
 
-<style scoped src="./../public/css/about.css">
+<style scoped src="/css/about.css">
 
 </style>

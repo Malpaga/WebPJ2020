@@ -47,10 +47,10 @@ module.exports = {
   },
   mounted (){
     let script = document.createElement('script')
-    script.setAttribute('src', './../public/js/script.js')
+    script.setAttribute('src', '/js/script.js')
     document.head.appendChild(script)
     let bg = document.getElementById('index_body')
-    bg.style.backgroundImage = 'url("https://images6.alphacoders.com/478/478918.jpg")'
+    bg.style.backgroundImage = 'url("public/img/background.jpg")'
   },
   methods: {
 

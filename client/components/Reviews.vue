@@ -84,7 +84,7 @@ module.exports = {
   },
   mounted (){
     let bg = document.getElementById('index_body')
-    bg.style.backgroundImage = 'url("https://www.mysoundbattle.com/wp-content/uploads/2013/12/foule-en-concert.jpg")'
+    bg.style.backgroundImage = 'url("/img/reviews.jpg")'
   },
   methods: {
       submitReview(){
@@ -94,6 +94,6 @@ module.exports = {
 }
 </script>
 
-<style src="./../public/css/reviews.css">
+<style src="/css/reviews.css">
 
 </style>

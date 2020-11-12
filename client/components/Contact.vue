@@ -57,6 +57,6 @@ module.exports = {
 }
 </script>
 
-<style scoped src="./../public/css/contact.css">
+<style scoped src="/css/contact.css">
 
 </style>

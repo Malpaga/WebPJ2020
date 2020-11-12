@@ -40,8 +40,6 @@ var app = new Vue({
     this.reviews = res.data
     const art = await axios.get('/api/artists')
     this.artists = art.data
-    console.log("HEEEEEEE")
-    console.log(this.artists)
 
     for (let index = 0; index < this.reviews.length; index++) {
       var d = new Date(this.reviews[index].date)

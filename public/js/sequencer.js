@@ -3,17 +3,17 @@
 var sequencer = document.getElementById('sequencer_container'); 
 
 var drum1 = document.createElement('audio');
-drum1.src="public/sound/snare01.ogg";
+drum1.src="/sound/snare01.ogg";
 drum1.type = "audio/ogg";
 drum1.className = "drum";
 
 var drum2 = document.createElement('audio');
-drum2.src="public/sound/clap01.ogg";
+drum2.src="/sound/clap01.ogg";
 drum2.type = "audio/ogg";
 drum2.className = "drum";
 
 var drum3 = document.createElement('audio');
-drum3.src="public/sound/kick01.ogg";
+drum3.src="/sound/kick01.ogg";
 drum3.type = "audio/ogg";
 drum3.className = "drum";
 
@@ -45,124 +45,124 @@ var C3, C3d, D3, E3, E3b, F3, F3d, G3, A3, A3b, B3, B3b;
 
 C3 = document.createElement("audio");
 C3.type = "audio/ogg";
-C3.src = "public/sound/C3.ogg";
+C3.src = "/sound/C3.ogg";
 C3.className = "synth";
 
 C3d = document.createElement("audio");
 C3d.type = "audio/ogg";
-C3d.src = "public/sound/C3d.ogg";
+C3d.src = "/sound/C3d.ogg";
 C3d.className = "synth";
 
 D3 = document.createElement("audio");
 D3.type = "audio/ogg";
-D3.src = "public/sound/D3.ogg";
+D3.src = "/sound/D3.ogg";
 D3.className = "synth";
 
 E3 = document.createElement("audio");
 E3.type = "audio/ogg";
-E3.src = "public/sound/E3.ogg";
+E3.src = "/sound/E3.ogg";
 E3.className = "synth";
 
 E3b = document.createElement("audio");
 E3b.type = "audio/ogg";
-E3b.src = "public/sound/E3b.ogg";
+E3b.src = "/sound/E3b.ogg";
 E3b.className = "synth";
 
 F3 = document.createElement("audio");
 F3.type = "audio/ogg";
-F3.src = "public/sound/F3.ogg";
+F3.src = "/sound/F3.ogg";
 F3.className = "synth";
 
 F3d = document.createElement("audio");
 F3d.type = "audio/ogg";
-F3d.src = "public/sound/F3d.ogg";
+F3d.src = "/sound/F3d.ogg";
 F3d.className = "synth";
 
 G3 = document.createElement("audio");
 G3.type = "audio/ogg";
-G3.src = "public/sound/G3.ogg";
+G3.src = "/sound/G3.ogg";
 G3.className = "synth";
 
 A3 = document.createElement("audio");
 A3.type = "audio/ogg";
-A3.src = "public/sound/A3.ogg";
+A3.src = "/sound/A3.ogg";
 A3.className = "synth";
 
 A3b = document.createElement("audio");
 A3b.type = "audio/ogg";
-A3b.src = "public/sound/A3b.ogg";
+A3b.src = "/sound/A3b.ogg";
 A3b.className = "synth";
 
 B3 = document.createElement("audio");
 B3.type = "audio/ogg";
-B3.src = "public/sound/B3.ogg";
+B3.src = "/sound/B3.ogg";
 B3.className = "synth";
 
 B3b = document.createElement("audio");
 B3b.type = "audio/ogg";
-B3b.src = "public/sound/B3b.ogg";
+B3b.src = "/sound/B3b.ogg";
 B3b.className = "synth";
 
 var C4, C4d, D4, E4b, E4, F4, F4d, G4, A4b, A4, B4b, B4;
 
 C4 = document.createElement("audio");
 C4.type = "audio/ogg";
-C4.src = "public/sound/C4.ogg";
+C4.src = "/sound/C4.ogg";
 C4.className = "synth";
 
 C4d = document.createElement("audio");
 C4d.type = "audio/ogg";
-C4d.src = "public/sound/C4d.ogg";
+C4d.src = "/sound/C4d.ogg";
 C4d.className = "synth";
 
 D4 = document.createElement("audio");
 D4.type = "audio/ogg";
-D4.src = "public/sound/D4.ogg";
+D4.src = "/sound/D4.ogg";
 D4.className = "synth";
 
 E4 = document.createElement("audio");
 E4.type = "audio/ogg";
-E4.src = "public/sound/E4.ogg";
+E4.src = "/sound/E4.ogg";
 E4.className = "synth";
 
 E4b = document.createElement("audio");
 E4b.type = "audio/ogg";
-E4b.src = "public/sound/E4b.ogg";
+E4b.src = "/sound/E4b.ogg";
 E4b.className = "synth";
 
 F4 = document.createElement("audio");
 F4.type = "audio/ogg";
-F4.src = "public/sound/F4.ogg";
+F4.src = "/sound/F4.ogg";
 F4.className = "synth";
 
 F4d = document.createElement("audio");
 F4d.type = "audio/ogg";
-F4d.src = "public/sound/F4d.ogg";
+F4d.src = "/sound/F4d.ogg";
 F4d.className = "synth";
 
 G4 = document.createElement("audio");
 G4.type = "audio/ogg";
-G4.src = "public/sound/G4.ogg";
+G4.src = "/sound/G4.ogg";
 G4.className = "synth";
 
 A4 = document.createElement("audio");
 A4.type = "audio/ogg";
-A4.src = "public/sound/A4.ogg";
+A4.src = "/sound/A4.ogg";
 A4.className = "synth";
 
 A4b = document.createElement("audio");
 A4b.type = "audio/ogg";
-A4b.src = "public/sound/A4b.ogg";
+A4b.src = "/sound/A4b.ogg";
 A4b.className = "synth";
 
 B4 = document.createElement("audio");
 B4.type = "audio/ogg";
-B4.src = "public/sound/B4.ogg";
+B4.src = "/sound/B4.ogg";
 B4.className = "synth";
 
 B4b = document.createElement("audio");
 B4b.type = "audio/ogg";
-B4b.src = "public/sound/B4b.ogg";
+B4b.src = "/sound/B4b.ogg";
 B4b.className = "synth";
 
 const tones = [C3, C3d, D3, E3b, E3, F3, F3d, G3, A3b, A3, B3b, B3];

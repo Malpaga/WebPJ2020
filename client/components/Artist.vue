@@ -44,8 +44,7 @@ module.exports = {
   async mounted (){
     let bg = document.getElementById('index_body')
     bg.style.backgroundColor = '#EC7357'
-    bg.style.backgroundImage = 'none' 
-    console.log(this.$route.params.artistId)
+    bg.style.backgroundImage = 'none'
     art = this.$route.params.artistId
     let i = 0
     while( art != this.artists[i].id){
@@ -59,6 +58,6 @@ module.exports = {
 }
 </script>
 
-<style scoped src="./../public/css/about.css">
+<style scoped src="/css/about.css">
 
 </style>
