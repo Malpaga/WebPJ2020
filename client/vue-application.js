@@ -103,8 +103,19 @@ var app = new Vue({
       
     },
     async addReview(newReview){
+      
       const res = await axios.post('/api/reviews', newReview)
       this.reviews.push(newReview)
+      alert("Your review has been posted, refresh the page to see it !")
+    },
+    async deleteReview(reviewId){
+      const res = await axios.delete('api/reviews', reviewId)
+      for(let i = 0 ; i < this.reviews.length ; i++){
+        if(this.reviews[i].id == reviewId){
+          this.reviews.splice(i, 1)
+          break
+        }
+      }
     },
     async logOut(event){
       await axios.delete('/api/logout')

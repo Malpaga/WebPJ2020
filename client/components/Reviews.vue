@@ -5,6 +5,9 @@
         <div class="review" v-for="review in reviews" :key="review.id">
             <div class="rellax imgcont">
                 <img class="picture" :src="review.image">
+                <div v-show="review.posterId == user.id" class="deleteRev">
+                    <button @click="deleteReview(review.id)"><i class="fas fa-trash-alt"></i></button>
+                </div>
             </div>
             <div class="rev_box">
                 <div class="rev_name">{{review.artist}} - {{review.album}}</div>
@@ -73,11 +76,14 @@
 module.exports = {
   props: {
       islog: Boolean,
+      user: Object,
       reviews: Array
     },
   data () {
     return {
         newReview: {
+            posterid: 2,
+            postername: '',
             artist: '',
             album: '',
             content: '',
@@ -90,10 +96,20 @@ module.exports = {
   mounted (){
     let bg = document.getElementById('index_body')
     bg.style.backgroundImage = 'url("/img/reviews.jpg")'
+    console.log(this.user.id)
+    console.log(this.reviews)
   },
   methods: {
       submitReview(){
-          this.$emit('submit-review', this.newReview)
+            this.$emit('submit-review', this.newReview)
+      },
+      deleteReview(reviewId){
+        if(this.user.userId != -1)
+        {
+            newReview.posterId = this.user.id
+            newReview.posterName = this.user.username
+        }
+        this.$emit('delete-review', {id : reviewId})
       }
   } 
 }

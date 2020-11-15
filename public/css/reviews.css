@@ -21,13 +21,18 @@ input[type=number] {
 .review{
     width: 510px;
     height: auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.739);
     border-radius: 10px;
     margin: 50px 50px;
     box-shadow: 5px 10px 20px black;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
+.review:hover{
+    background: white;
+    width: 561px;
+    font-size: 110%;
+}
 
 .picture{
     transform-origin: 50% 50%;
@@ -153,7 +158,27 @@ input, textarea{
     border-radius: 3px;
     border-style: none;
     box-shadow: 1px 1px 10px black;
+    margin-bottom: 10px;
     width: 180px;
+}
+
+.imgcont{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.imgcont div{
+    margin: 10px 10px 0 auto;
+}
+
+.imgcont i{
+    font-size: 200%;
+    transition: all 0.25s ease-in-out;
+}
+
+.imgcont i:hover{
+    font-size: 220%;
+    color: red;
 }
 
 .rev_form{
@@ -182,6 +207,7 @@ input, textarea{
 }
 
 #rev_cont{
+    
     width: 90%;
 }
 
@@ -201,6 +227,12 @@ input, textarea{
 .image_input input{
     box-shadow: 1px 1px 10px black;
     width: 300px;
+}
+
+.deleteRev button, .deleteRev i{
+    background: none;
+    border: none;
+    color: black;
 }
 
 .rating_input{

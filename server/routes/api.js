@@ -58,7 +58,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   const username = req.body.username
   const password = req.body.password
-  var sql = "SELECT * FROM users WHERE username=$1 "
+  var sql = "SELECT * FROM users WHERE username=$1"
   var result = await client.query({
     text: sql,
     values: [username]
@@ -101,6 +101,7 @@ router.get('/reviews', async (req, res) => {
   var result = await client.query({
     text: sql
   })
+  console.log(result.rows)
   res.json(result.rows)
 })
 
@@ -118,14 +119,26 @@ router.delete('/logout', (req, res) => {
 router.post('/reviews', async (req, res) => {
 
   var review = req.body
-  sql = 'INSERT INTO reviews (artist, album, content, image, rating, date) VALUES ($1, $2, $3, $4, $5, $6)'
+  sql = 'INSERT INTO reviews (artist, album, content, image, rating, date, posterid, postername) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)'
   result = await client.query({
     text: sql,
-    values: [review.artist, review.album, review.content, review.image, review.rating, review.date]
+    values: [review.artist, review.album, review.content, review.image, review.rating, review.date, review.posterid, review.postername]
   })
 
-  res.status(200)
+  res.status(200).send({message:"review posted"})
+  return
+})
 
+router.delete('/reviews', async (req, res) => {
+  var reviewId = req.body
+  sql = "DELETE FROM reviews WHERE id=$1"
+  await client.query({
+    text: sql,
+    values: [reviewId.id]
+  })
+
+  res.status(200).send({message:"review deleted"})
+  return
 })
 
 router.get('/artists/:artistId', async (req, res) => {

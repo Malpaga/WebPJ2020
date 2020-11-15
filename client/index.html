@@ -55,6 +55,7 @@
             <main>
                 <router-view
                     :islog="islog"
+                    :user="user"
                     :artists="artists"
                     :reviews="reviews"
                     :harttitle="harttitle"
@@ -64,6 +65,7 @@
                     @submit-review="addReview"
                     @register-user="registerUser"
                     @log-in="logIn"
+                    @delete-review="deleteReview"
                 ></router-view>
             </main>
             
