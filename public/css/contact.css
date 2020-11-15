@@ -13,7 +13,8 @@
 input, textarea{
     color: black;
     padding: 8px;
-    border-radius: 1rem;
+    margin: 10px 10px;
+    border-radius: 3px;
     border-style: none;
     box-shadow: 1px 1px 10px black;
 }
@@ -32,6 +33,7 @@ input, textarea{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
     width: 100%;
     flex: 1 1 0;
 }
@@ -56,4 +58,33 @@ input, textarea{
 
 .button_line{
     margin-bottom: 50px;
+}
+
+.d_button{
+    transform-origin: 50% 50%;
+    color: white;
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.d_button:hover{
+    color: #EC7357;
+    background: white;
+}
+
+.d_button:active{
+    letter-spacing: 2px;
+}
+
+.d_button:after{
+    content: "SUBMIT";
 }

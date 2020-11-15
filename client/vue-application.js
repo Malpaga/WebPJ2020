@@ -6,6 +6,7 @@ const Reviews = window.httpVueLoader('./components/Reviews.vue')
 const Login = window.httpVueLoader('./components/Login.vue')
 const Contact = window.httpVueLoader('./components/Contact.vue')
 const About = window.httpVueLoader('./components/About.vue')
+const Register = window.httpVueLoader('./components/Register.vue')
 
 
 const routes = [
@@ -17,7 +18,9 @@ const routes = [
   { path: '/login', component: Login},
   { path: '/about', component: About},
   { path: '/reviews', component: Reviews},
-  { path: '/contact', component: Contact}
+  { path: '/contact', component: Contact},
+  { path: '/register', component: Register},
+  { path: '/login', component: Login}
 ]
 
 const router = new VueRouter({
@@ -28,6 +31,11 @@ var app = new Vue({
   router,
   el: '#app',
   data: {
+    islog: false,
+    user:{
+      id: -1,
+      username: '',
+    },
     reviews: [],
     artists: [],
     harttitle: "Pearl Jam",
@@ -40,6 +48,13 @@ var app = new Vue({
     this.reviews = res.data
     const art = await axios.get('/api/artists')
     this.artists = art.data
+    const us = await axios.get('/api/me')
+    this.user = us.data
+    if(this.user.id != -1){
+      this.islog = true
+    }else{
+      this.islog = false
+    }
 
     for (let index = 0; index < this.reviews.length; index++) {
       var d = new Date(this.reviews[index].date)
@@ -51,9 +66,48 @@ var app = new Vue({
     }
   },
   methods: {
+    async registerUser(newUser){
+      
+      try{
+        const res = await axios.post('/api/register/', newUser)
+        if (res.status === 200) {
+          alert(res.data.message)
+        }
+      }
+      catch (err){alert("Username or mail already used.")}
+      
+    },
+    async logIn(user){
+      
+      try{
+        const res = await axios.post('/api/login/', user)
+        if (res.status === 200) {
+          alert("Logged in !")
+          this.user = res.data
+          this.islog = true
+          router.push({path: '/'})
+        }
+      }
+      catch (err){
+        if(user.id == -1){
+          alert("Incorrect username or password.")
+        }else{
+          alert("Already logged in.")
+        }
+        
+      }
+      
+    },
     async addReview(newReview){
       const res = await axios.post('/api/reviews', newReview)
       this.reviews.push(newReview)
+    },
+    async logOut(event){
+      await axios.delete('/api/logout')
+      alert("Logged out !")
+      this.islog = false;
+      this.user.id = -1;
+      this.user.username = '';
     }
   }
 })

@@ -31,10 +31,11 @@
                 <div class="message">
                     <textarea name="message" id="message_content" cols="30" rows="10" placeholder="Type your message here..." maxlength="300"></textarea>
                 </div>      
+            <div class="button_line">
+                <button type="button" class="d_button" id="d_button1" onclick="submit_form();"></button>
+            </div>
         </form>
-        <div class="button_line">
-            <button type="button" id="done_button" class="d_button" onclick="submit_form();"></button>
-        </div>
+        
     </div>
 </template>
 

@@ -30,8 +30,13 @@
                             <router-link to='/reviews' class="nav_link">Reviews</router-link>
                             <router-link to='/contact' class="nav_link">Contact Us</router-link>
                             <router-link to='/about' class="nav_link">About Us</router-link>
+                            <router-link v-if="!islog" to='/register' class="nav_link">Sign In</router-link>
+                            <div class="log" v-else>
+                                <div class="me">Hello, {{user.username}}</div>
+                                <button @click="logOut"><i class="fas fa-sign-out-alt" id="log-out" ></i></button>
+                            </div>
                     </div>
-    
+                    
                     <button class="nav_toggle hamburger hamburger--collapse" type="button" id="burg" onclick="activate()">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -56,6 +61,8 @@
                     :hartimage="hartimage"
                     :hartcaption="hartcaption"
                     @submit-review="addReview"
+                    @register-user="registerUser"
+                    @log-in="logIn"
                 ></router-view>
             </main>
             

@@ -44,7 +44,7 @@
             <textarea name="review_content" id="rev_cont" cols="30" rows="10" v-model="newReview.content" placeholder="Leave your review here !" maxlength="300"></textarea>
             
             <div class="image_input">
-                <label for="myFile">Upload an image for your review !</label>
+                <label for="myFile">Enter an image url to decorate your review !<br><br></label>
                 <input type="url" id="myFile" name="filename" autocomplete="off" v-model="newReview.image">
             </div>
 

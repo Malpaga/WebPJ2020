@@ -30,53 +30,52 @@ router.use((req, res, next) => {
 })
 
 router.post('/register', async (req, res) => {
+  const username = req.body.username
   const email = req.body.email
   const password = req.body.password
 
-  var sql = "SELECT * FROM users WHERE email=$1"
+  var sql = "SELECT * FROM users WHERE mail=$1 OR username=$2"
   var result = await client.query({
     text: sql,
-    values: [email]
+    values: [email, username]
   })
 
-  if(result.rowCount !== 0 || typeof email !== 'string' || email === '' || typeof password !== 'string' || password === ''){
+  if(result.rowCount !== 0 || typeof username !== 'string' || username === '' || typeof email !== 'string' || email === '' || typeof password !== 'string' || password === ''){
     res.status(401).json({ message: 'User already exists or fields are incorrect'})
     return
   }
 
   const hash = await bcrypt.hash(password, 10)
 
-  sql = 'INSERT INTO users (email, password) VALUES ($1, $2)'
+  sql = 'INSERT INTO users (username, mail, pw) VALUES ($1, $2, $3)'
   result = await client.query({
     text: sql,
-    values: [email, hash]
+    values: [username, email, hash]
   })
   res.status(200).json({message: 'You are now registered.'})
 })
 
 router.post('/login', async (req, res) => {
-  const email = req.body.email
+  const username = req.body.username
   const password = req.body.password
-  console.log(req.session.userId)
-  var sql = "SELECT * FROM users WHERE email=$1 "
+  var sql = "SELECT * FROM users WHERE username=$1 "
   var result = await client.query({
     text: sql,
-    values: [email]
+    values: [username]
   })
   const user = result.rows[0]
   if(result.rowCount === 0 || req.session.userId === user.id){
     res.status(401).json({message : "Already logged in."})
     return
   }
-  const hashed = user.password
+  const hashed = user.pw
 
   if (await bcrypt.compare(password, hashed)){
     req.session.userId = user.id
-    res.status(200).json({message : "logged in !"})
-    console.log(req.session.userId)
+    res.status(200).json({id : user.id, username : user.username})
     return
   }
-  res.status(400).json({message : "Email doesn't exist or password is incorrect."})
+  res.status(400).json({message : "Username doesn't exist or password is incorrect."})
 
 })
 
@@ -87,13 +86,13 @@ router.get('/me', async (req, res) => {
       values : [req.session.userId]
     })
     if (result.rowCount === 0) {
-      res.status(401).send({message: "error"})
+      res.status(401).send({id : -1, username : ''})
       return
     }
-    res.status(200).send({id : result.rows[0].id, email : result.rows[0].email})
+    res.status(200).send({id : result.rows[0].id, username : result.rows[0].username})
     return
   }
-  res.status(401).send({message: "No user connected"})
+  res.status(401).send({id : -1, username : ''})
 })
 
 router.get('/reviews', async (req, res) => {
@@ -103,6 +102,17 @@ router.get('/reviews', async (req, res) => {
     text: sql
   })
   res.json(result.rows)
+})
+
+router.delete('/logout', (req, res) => {
+  if(typeof req.session.userId != undefined){
+    req.session.userId = undefined
+    res.status(200).send({message: "Logged out"})
+    return
+  }
+  res.status(400).send({message: "No user connected"})
+
+
 })
 
 router.post('/reviews', async (req, res) => {

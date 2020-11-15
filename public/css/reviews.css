@@ -22,7 +22,7 @@ input[type=number] {
     width: 510px;
     height: auto;
     background: white;
-    border-radius: 2rem;
+    border-radius: 10px;
     margin: 50px 50px;
     box-shadow: 5px 10px 20px black;
     transition: all 1s ease-in-out;
@@ -150,9 +150,10 @@ input[type=number] {
 input, textarea{
     color: black;
     padding: 8px;
-    border-radius: 1rem;
+    border-radius: 3px;
     border-style: none;
     box-shadow: 1px 1px 10px black;
+    width: 180px;
 }
 
 .rev_form{
@@ -197,8 +198,8 @@ input, textarea{
 }
 
 .image_input input{
-    box-shadow: none;
-    width: auto;
+    box-shadow: 1px 1px 10px black;
+    width: 300px;
 }
 
 .rating_input{
