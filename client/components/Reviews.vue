@@ -27,7 +27,11 @@
     <div class="rev_form">
 
         <h4>Want to leave a review?</h4>
-        <form class="add_review" @submit.prevent="submitReview">
+        <div v-if="!islog" class="notloggedin">
+            <h4>Log in to post one!</h4>
+            <router-link to='/login'><button class="link"></button></router-link>
+        </div>
+        <form v-else class="add_review" @submit.prevent="submitReview">
             <div class="names">
 
                 <div class="a_name">
@@ -68,6 +72,7 @@
 <script>
 module.exports = {
   props: {
+      islog: Boolean,
       reviews: Array
     },
   data () {
