@@ -30,13 +30,13 @@ input[type=number] {
 
 .review:hover{
     background: white;
-    width: 561px;
-    font-size: 110%;
+    transform: scale(1.10);
 }
 
 .picture{
     transform-origin: 50% 50%;
     overflow: hidden;
+    background-size: cover;
     width: 150px;
     height: 150px;
     box-shadow: 5px 5px 10px black;
@@ -81,9 +81,11 @@ input[type=number] {
     text-align: right;
 }
 
-.t_content .date, .t_content .text{
+.t_content div{
     color: black;
+    word-wrap: break-word;
 }
+
 
 .t_content .date{
     font-size: 70%;
@@ -158,7 +160,7 @@ input, textarea{
     border-radius: 3px;
     border-style: none;
     box-shadow: 1px 1px 10px black;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     width: 180px;
 }
 
@@ -167,7 +169,7 @@ input, textarea{
     flex-flow: row nowrap;
 }
 
-.imgcont div{
+.imgcont .deleteRev{
     margin: 10px 10px 0 auto;
 }
 
@@ -177,7 +179,7 @@ input, textarea{
 }
 
 .imgcont i:hover{
-    font-size: 220%;
+    transform: scale(1.25);
     color: red;
 }
 
@@ -197,7 +199,15 @@ input, textarea{
 }
 
 .add_review{
-    height: 500px;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstline{
     width: 80vw;
     max-width: 400px;
     display: flex;
@@ -206,8 +216,14 @@ input, textarea{
     align-items: center;
 }
 
+.secondline{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+
 #rev_cont{
-    
     width: 90%;
 }
 
@@ -218,10 +234,21 @@ input, textarea{
     justify-content: space-around;
 }
 
+.poster{
+    font-size: small;
+    margin-right: 10px;
+    width: 100px;
+}
+
+.dp{
+    margin-top: auto;
+}
+
 .image_input{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .image_input input{
@@ -239,10 +266,11 @@ input, textarea{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    margin-left: 10px;
 }
 
 .rating_input label{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .select_range{
@@ -250,10 +278,14 @@ input, textarea{
     width: 100%;
     justify-content: space-around;
     align-items: center;
+    margin-top: 9px;
+}
+
+#textinput{
+    margin-bottom: 15px;
 }
 
 input[type=range]::-moz-range-track{
-    
     background-color: #EC7357;
 
 }

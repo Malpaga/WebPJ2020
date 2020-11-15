@@ -47,13 +47,16 @@ var app = new Vue({
     hartimage: "https://upload.wikimedia.org/wikipedia/commons/5/5b/EddieVedder.jpg",
     hartcaption: "Eddie Vedder"
   },
+  async created(){
+    const us = await axios.get('/api/me')
+    this.user = us.data
+  },
   async mounted () {
+    
     const res = await axios.get('/api/reviews')
     this.reviews = res.data
     const art = await axios.get('/api/artists')
     this.artists = art.data
-    const us = await axios.get('/api/me')
-    this.user = us.data
     if(this.user.id != -1){
       this.islog = true
     }else{
@@ -81,6 +84,10 @@ var app = new Vue({
       catch (err){alert("Username or mail already used.")}
       
     },
+    async getUser(){
+      const us = await axios.get('/api/me')
+      this.user = us.data
+    },
     async logIn(user){
       
       try{
@@ -103,18 +110,34 @@ var app = new Vue({
       
     },
     async addReview(newReview){
-      
+      if(this.user.id != -1)
+      {
+          newReview.posterId = this.user.id
+          newReview.posterName = this.user.username
+      }
       const res = await axios.post('/api/reviews', newReview)
+      var d = new Date(newReview.date)
+      newReview.date = d.toLocaleDateString({
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
       this.reviews.push(newReview)
-      alert("Your review has been posted, refresh the page to see it !")
+      alert("Your review has been posted !")
     },
-    async deleteReview(reviewId){
-      const res = await axios.delete('api/reviews', reviewId)
-      for(let i = 0 ; i < this.reviews.length ; i++){
-        if(this.reviews[i].id == reviewId){
-          this.reviews.splice(i, 1)
-          break
+    async deleteReview(review){
+      if(confirm("Are you sure you want to delete this review ?")){
+        console.log(review)
+        var id = review.id
+        const res = await axios.delete('api/reviews/' + id)
+        for(let i = 0 ; i < this.reviews.length ; i++){
+          console.log(this.reviews[i])
+          if(this.reviews[i].id == review.id){
+            this.reviews.splice(i, 1)
+            break
+          }
         }
+        alert("Review successfully deleted.")
       }
     },
     async logOut(event){

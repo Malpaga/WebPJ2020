@@ -18,7 +18,7 @@ var userId = undefined
 const client = new Client({
  user: 'postgres',
  host: 'localhost',
- password: 'reglisse02',
+ password: 'azertyuiop',
  database: 'WebProject'
 })
 
@@ -129,12 +129,13 @@ router.post('/reviews', async (req, res) => {
   return
 })
 
-router.delete('/reviews', async (req, res) => {
-  var reviewId = req.body
+router.delete('/reviews/:id', async (req, res) => {
+  var id = req.params.id
+  console.log(id)
   sql = "DELETE FROM reviews WHERE id=$1"
   await client.query({
     text: sql,
-    values: [reviewId.id]
+    values: [id]
   })
 
   res.status(200).send({message:"review deleted"})

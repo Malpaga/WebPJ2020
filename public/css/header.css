@@ -29,13 +29,16 @@ header{
 .log{
     font: 'LemonMilk';
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     color: rgba(223, 249, 251,1.0);
     text-transform: uppercase;
     text-align: center;
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: 5px;
 }
+
 
 .log button{
     width: 45px;
@@ -78,7 +81,7 @@ header{
     position: relative;
     display: flex;
     left: 0;
-    width: 70vw;
+    width: 80vw;
     margin-left: 50px;
 }
 
@@ -118,7 +121,7 @@ header{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1250px){
+@media only screen and (max-width: 1675px){
     .nav_right{
         width: 70px;
         object-fit: cover;
@@ -132,7 +135,7 @@ header{
     }
 }
 
-@media only screen and (max-width: 1080px){
+@media only screen and (max-width: 1430px){
     
     .nav_left{
         position: absolute;
