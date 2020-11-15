@@ -79,7 +79,7 @@
     width: 100%;
 }
 
-#Alix{
+#Stan{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -97,25 +97,14 @@
     margin-left: 25px;
 }
 
-#Lilian{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-right: 25px;
-}
+
 
 #school h3{
     margin-left: -30px;
 }
 
-#Alix h3{
-    margin-left: -200px;
-}
-
-#Lilian h3{
-    margin-left: -200px;
+#Stan h3{
+    margin-left: -20px;
 }
 
 #project h3{
@@ -123,7 +112,9 @@
 }
 
 #Philippe h3{
-    margin-right: -150px;
+    display: flex;
+    width: 100px;
+    margin-right: 50px;
 }
 
 

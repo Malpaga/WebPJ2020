@@ -1,5 +1,6 @@
 <template>
 <div>
+  
   <h1 class="title">Artists</h1>
   <div class="artists">
     <div class="first" v-for="artist in artists" :key="artist.id" id="artist" :style="{ backgroundImage: 'url(' + artist.image + ')' }">

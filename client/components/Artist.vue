@@ -1,16 +1,19 @@
 <template>
-  <div>  
+  <div> 
+    <div class="lArrow">
+      <button><router-link :to="{path: '/artists'}"><i class="fas fa-arrow-left"></i>Back to the artists page</router-link></button>
+    </div> 
     <div class="bandphoto" :style="{backgroundImage: 'url(' + artist.image + ')'}">
-      <div id="artist" > <h1 class="title" >{{artist.name}}</h1> </div> 
+      <div id="artist"> <h1 class="artist_title">{{artist.name}}</h1></div> 
+      <div class="quickinfos">
+        <span class="infos"><p contentEditable role='textbox' aria-multiline='true'>Genre : {{artist.genre}} </p></span>
+        <span class="infos"><p contentEditable role='textbox' aria-multiline='true'>Origin : {{artist.origin}} </p></span>
+        <span class="infos">  <p contentEditable role='textbox' aria-multiline='true'> Years of activity : {{artist.activity}}</p> </span>
+        <span class="infos"> <p contentEditable role='textbox' aria-multiline='true'> Number of albums : {{artist.albumnb}} </p></span>
+      </div>
     </div>
 
-    <div class="quickinfos">
-        <span class="infos"><p>Genre : {{artist.genre}} </p></span>
-        <span class="infos"><p>Origin : {{artist.origin}} </p></span>
-        <span class="infos">  <p> Years of activity : {{artist.activity}}</p> </span>
-        <span class="infos"> <p> Number of albums : {{artist.albumnb}} </p></span>
     
-    </div>
 
     <div class="Bio">
         <h2 class="Bio1">About the Artist</h2>
