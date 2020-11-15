@@ -107,8 +107,17 @@ module.exports = {
   },
   methods: {
       submitReview(){
-        
         this.$emit('submit-review', this.newReview)
+        this.newReview = {
+            posterid: this.user.id,
+            postername: this.user.username,
+            artist: '',
+            album: '',
+            content: '',
+            image: '',
+            rating: 50,
+            date: new Date()
+      }
       },
       deleteReview(review){
         this.$emit('delete-review', review)
