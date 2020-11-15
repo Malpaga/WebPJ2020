@@ -101,7 +101,6 @@ router.get('/reviews', async (req, res) => {
   var result = await client.query({
     text: sql
   })
-  console.log(result.rows)
   res.json(result.rows)
 })
 
@@ -131,7 +130,6 @@ router.post('/reviews', async (req, res) => {
 
 router.delete('/reviews/:id', async (req, res) => {
   var id = req.params.id
-  console.log(id)
   sql = "DELETE FROM reviews WHERE id=$1"
   await client.query({
     text: sql,

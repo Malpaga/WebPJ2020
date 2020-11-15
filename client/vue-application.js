@@ -112,17 +112,19 @@ var app = new Vue({
     async addReview(newReview){
       if(this.user.id != -1)
       {
-          newReview.posterId = this.user.id
-          newReview.posterName = this.user.username
+        newReview.posterId = this.user.id
+        newReview.posterName = this.user.username
       }
-      const res = await axios.post('/api/reviews', newReview)
+      await axios.post('/api/reviews', newReview)
       var d = new Date(newReview.date)
       newReview.date = d.toLocaleDateString({
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
       })
-      this.reviews.push(newReview)
+      const res = await axios.get('/api/reviews')
+      this.reviews = res.data
+      
       alert("Your review has been posted !")
     },
     async deleteReview(review){
