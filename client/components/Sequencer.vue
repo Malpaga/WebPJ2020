@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1 class="seq_title">Let your creativity do the job</h1>
+    <p style="text-align: center; margin-bottom: 20px; margin-top: 20px">Headphones are highly recommanded, some sounds might not play on speakers.</p> 
+    <p style="text-align: center; margin-bottom: 20px;">If you have issues seeing this page, try and reload it.</p>
       <div class="seq_box">
           
           <div class="text_cont">
@@ -29,8 +31,8 @@
           </div>
       </div>
       
-      <p style="text-align: center; margin-bottom: 20px;">Headphones are highly recommanded, some sounds might not play on speakers.</p>    
-      <p style="text-align: center; margin-bottom: 20px;">If you have issues seeing this page, try and reload it.</p>
+         
+      
       <div  style="width: 100%; text-align: center;margin-bottom: 10px;">
           <button type="button" class="control_button" onclick="start_loop()" id="stb">▶</button>
           <button type="button" class="control_button" onclick="stop_loop()">⏹︎</button>
