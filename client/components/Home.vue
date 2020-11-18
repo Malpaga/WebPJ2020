@@ -19,7 +19,7 @@
               <div id ="artPhoto">
                   <div id="article">
                       <h2 id="title">{{harttitle}}</h2>
-                      <p id="content">{{hartcontent}}</p>
+                      <p id="content"><span v-html="hartcontent"></span></p>
                   </div>
                   <div id="ArticlePhoto" class="rellax" data-rellax-speed="-1">
                       <img class="rellax" data-rellax-speed="0" :src="hartimage">

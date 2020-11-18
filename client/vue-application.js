@@ -43,13 +43,14 @@ var app = new Vue({
     reviews: [],
     artists: [],
     harttitle: "Pearl Jam",
-    hartcontent: "A group",
+    hartcontent: "Pearl Jam is one of the most well-known grunge band. The group is composed of Eddie Vedder (singer), Jeff Ament (bassist), Moke McCready (lead guitarist) Stone Gossard (guitarist) and finally Matt Cameron (drummer). <br><br>They released their first album, Ten, in 1991. Back then, grunge music was starting to take off. With Nirvana providing a punk style, Soundgarden an alternative style and Alice in Chains a heavy metal style, Pearl Jam gave grunge a classic rock feel similar to The Who and Neil Young. <br><br>After this widely acclaimed first album, Pearl Jam then came back with Vs. in 1993. It also was a huge success and ended up to be seven times platinum. This album features 12 powerful songs of which are two ballads Daughter and Ederly Woman Behind the Counter in a Small Town. <br><br>Finally, Pearl Jam made 11 studio albums in total. The last one being Gigaton, released the 27th of March this year.",
     hartimage: "https://upload.wikimedia.org/wikipedia/commons/5/5b/EddieVedder.jpg",
     hartcaption: "Eddie Vedder"
   },
   async created(){
     const us = await axios.get('/api/me')
     this.user = us.data
+    
   },
   async mounted () {
     
