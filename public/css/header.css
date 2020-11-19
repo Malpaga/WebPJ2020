@@ -25,7 +25,9 @@ header{
     height: 70px;
     
 }
-
+.log .me{
+    padding: 5px;
+}
 .log{
     font: 'LemonMilk';
     display: flex;
