@@ -36,8 +36,10 @@
                                 <router-link to='/login' class="nav_link">Log in</router-link>
                             </div>
                             <div class="log" v-else>
-                                <div class="me">Hello, {{user.username}}</div>
-                                <button @click="logOut"><i class="fas fa-sign-out-alt" id="log-out" ></i></button>
+                                <div id="one">
+                                    <div class="me">Hello, {{user.username}}</div>
+                                    <button @click="logOut"><i class="fas fa-sign-out-alt" id="log-out" ></i></button>
+                                </div>
                             </div>
                             
                     </div>

@@ -30,6 +30,6 @@ module.exports = {
 }
 </script>
 
-<style scoped src="/css/artists.css">
+<style scoped>
 
 </style>
