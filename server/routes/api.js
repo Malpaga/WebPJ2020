@@ -18,7 +18,7 @@ var userId = undefined
 const client = new Client({
  user: 'postgres',
  host: 'localhost',
- password: 'reglisse02',
+ password: 'azertyuiop',
  database: 'WebProject'
 })
 

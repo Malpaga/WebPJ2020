@@ -7,8 +7,6 @@
       <router-link :to="{path: '/artist/' + artist.id}"><p class="artist_text"> {{artist.name}} </p></router-link>
     </div>
   </div>
-
-  <router-link to="/artists_of_the_month"> <h1 class="title" id="special">Artists of the month</h1></router-link>
 </div>
 </template>
 

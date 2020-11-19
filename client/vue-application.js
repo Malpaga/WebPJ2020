@@ -129,11 +129,9 @@ var app = new Vue({
     },
     async deleteReview(review){
       if(confirm("Are you sure you want to delete this review ?")){
-        console.log(review)
         var id = review.id
         const res = await axios.delete('api/reviews/' + id)
         for(let i = 0 ; i < this.reviews.length ; i++){
-          console.log(this.reviews[i])
           if(this.reviews[i].id == review.id){
             this.reviews.splice(i, 1)
             break
