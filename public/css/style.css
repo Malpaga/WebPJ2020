@@ -51,7 +51,7 @@ h1{
 }
 .artist_title{
     margin: 35px auto;
-    font-size: 4vw;
+    font-size: 78px;
 }
 .welcome-title{
     font-weight: 300;
@@ -310,6 +310,13 @@ h2{
     font-weight: bold;
     font-size: 25px;
 }
+.quickinfos div, .quickinfos span
+{
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
 
 
 .infos
@@ -324,15 +331,22 @@ h2{
 .lArrow
 {
     margin: 100px 0 10px 70px;
+    transition: all 0.5s ease-in-out;
 }
 
 .lArrow button, .lArrow i
 {
+    
     background: none;
     border: none;
     color: rgb(255, 255, 255);
     font-size: 33px;
     margin-right: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.lArrow a{
+    display: flex;
+    flex-flow: row nowrap;
 }
 .lArrow
 {
@@ -381,21 +395,30 @@ h2{
     display:flex;
     padding-left: 8%;
     border-left: 2px solid white;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.album p {
+    width: 300px;
 }
 
 .albumphoto
 {
-    max-height: 300px;
-    min-height: 100px;
-    margin-bottom: 2%;
+    height: 300px;
+    width: 300px;
+    margin: 30px 0 0 0;
+}
+#disco{
+    margin-bottom: 25px;
 }
 
 .albumtext
 {
-    font-size:2vw;
-    margin: auto;
-    margin-top: 8%;
+    font-size:25px;
+    margin: 20px auto 20px 0;
     justify-content: center;
+    text-align: center;
+    height: 50px;
 }
 
 
@@ -451,4 +474,52 @@ h2{
     line-height: 380px;
     font-size: 250%;
     transition: all 0.3s linear;
+}
+
+@media only screen and (max-width: 450px){
+    .lArrow
+    {
+        margin: 100px 0 10px 30px;
+    }
+
+}
+@media only screen and (max-width: 650px){
+    .quickinfos
+    {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        
+    }
+    .quickinfos div, .quickinfos span
+    {
+        margin-top: 5px;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+}
+
+@media only screen and (max-width: 404px){
+    .lArrow
+    {
+        margin: 100px 0 10px 20px;
+    }
+
+    .lArrow div{
+        display: none;
+    }
+    .lArrow i{
+        font-size: 200%;
+    }
+    .artist_title{
+        font-size: 35px;
+    }
+    .albumphoto{
+        width: 250px;
+        height: 250px;
+    }
+    
 }

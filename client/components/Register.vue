@@ -1,22 +1,26 @@
 <template>
     <div class="cont">
-        <h2>Sign in ! </h2>
-        <form @submit.prevent="registerUser" id="register">
-            <input type="text" v-model="newUser.username" placeholder="Username" required>
-            <input type="email" v-model="newUser.email" placeholder="Email" required>
-            <input id="pw" type="password" @keyup="keyup" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" @click="focus" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" v-model="newUser.password" placeholder="Password" required>
-            
-            <button class="d_button" type="submit"></button>
-        </form>
-        <div id="message">
-            <h2>Password must contain the following:</h2>
-            <p id="letter" class="invalid">A lowercase letter</p>
-            <p id="capital" class="invalid">A capital (uppercase) letter</p>
-            <p id="number" class="invalid">A number</p>
-            <p id="length" class="invalid">Minimum 8 characters</p>
+        <div id="glob">
+            <h2>Sign in ! </h2>
+            <form @submit.prevent="registerUser" id="register">
+                <input type="text" v-model="newUser.username" placeholder="Username" required>
+                <input type="email" v-model="newUser.email" placeholder="Email" required>
+                <input id="pw" type="password" @keyup="keyup" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" @click="focus" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" v-model="newUser.password" placeholder="Password" required>
+                
+                <button class="d_button" type="submit"></button>
+            </form>
+            <div id="message">
+                <h2>Password must contain the following:</h2>
+                <p id="letter" class="invalid">A lowercase letter</p>
+                <p id="capital" class="invalid">A capital (uppercase) letter</p>
+                <p id="number" class="invalid">A number</p>
+                <p id="length" class="invalid">Minimum 8 characters</p>
+            </div>
+            <div id="link_but">
+                <h2>Already a member ?<br></h2>
+                <router-link to='/login'><button class="link"></button></router-link>
+            </div>
         </div>
-        <h2>Already a member ?<br></h2>
-        <router-link to='/login'><button class="link"></button></router-link>
     </div>
 </template>
 
@@ -130,24 +134,25 @@ module.exports = {
   left: -35px;
   content: "❌";
 }
-
 .cont{
+    display: flex;
+    justify-content: center;
+}
+.cont #glob{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    width: 80%;
 }
-
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
     margin-top: 100px;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 300px;
+    width: 250px;
 }
 
 .d_button{
@@ -178,7 +183,12 @@ form{
 .d_button:after{
     content: "REGISTER";
 }
-
+.link #link_but{
+    width: 100%;
+}
+#link_but h2{
+    text-align: center;
+}
 .link{
     transform-origin: 50% 50%;
     color: white;

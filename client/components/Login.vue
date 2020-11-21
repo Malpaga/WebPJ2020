@@ -1,19 +1,22 @@
 <template>
     <div class="cont">
-        <h2>Login ! <br></h2>
-        
-        <form @submit.prevent="logIn" id="login" class="log_form">
-            <input type="text" v-model="user.username" placeholder="Username" required>
-            <input type="password" v-model="user.password" placeholder="Password" required>
-            <div class="button_line">
-                <button class="d_button" type="submit"></button>
-            </div>
+        <div id="glob">
+            <h2>Login ! <br></h2>
             
-        </form>
-        
-        
-        <h2>Not a member yet ?<br></h2>
-        <router-link to='/register'><button class="link"></button></router-link>
+            <form @submit.prevent="logIn" id="login" class="log_form">
+                <input type="text" v-model="user.username" placeholder="Username" required>
+                <input type="password" v-model="user.password" placeholder="Password" required>
+                <div class="button_line">
+                    <button class="d_button" type="submit"></button>
+                </div>
+                
+            </form>
+            
+            <div id="link_but">
+                <h2>Not a member yet ?<br></h2>
+                <router-link to='/register'><button class="link"></button></router-link>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -45,32 +48,31 @@ module.exports = {
 </script>
 
 <style scoped>
-
-
-
 .cont{
+    display: flex;
+    justify-content: center;
+}
+.cont #glob{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    width: 80%;
 }
-
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
     margin-top: 100px;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 300px;
+    width: 250px;
 }
 
 .d_button{
     transform-origin: 50% 50%;
     color: white;
-    width: 300px;
+    width: 100%;
     height: 40px;
     background: transparent;
     border: 3px solid white;
@@ -95,11 +97,16 @@ form{
 .d_button:after{
     content: "LOGIN";
 }
-
+.link #link_but{
+    width: 100%;
+}
+#link_but h2{
+    text-align: center;
+}
 .link{
     transform-origin: 50% 50%;
     color: white;
-    width: 300px;
+    width: 100%;
     height: 40px;
     background: transparent;
     border: 3px solid white;
@@ -115,7 +122,9 @@ form{
 button{
     margin-top: 10px;
 }
-
+.button_line{
+    width: 100%;
+}
 .link:hover{
     color: #EC7357;
     background: white;
