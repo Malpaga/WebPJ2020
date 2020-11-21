@@ -14,7 +14,7 @@
           <div id="Stan">
               <div class="imgAbout" ><img src = "/img/Stan.jpg"></div>
               <h3 class="rellax" data-rellax-speed="0.5">Stan Méline</h3>
-              <p>I'm a third year student at Efrei Paris. I am passionated by music and play the guitar since 2010.
+              <p>I'm a third year student at Efrei Paris. I am passionated by music and play the guitar since 2010. I think a big part of the music creation is the sharing of it. Discover new artists, make someone love what you love to listen to are very good moments around music.
               </p>
           </div>
           <div id="Philippe">
@@ -22,7 +22,7 @@
               <h3 class="rellax" data-rellax-speed="0.5">Philippe Mangeard</h3>
               <p>3nd year IT student at Efrei Paris, I'm keen on listening to music, playing video games with my friends and programming funny stuff. 
                   When this project started, I was excited about all the things we could do, maybe too much. I still hope you enjoyed our website! 
-                  I contributed in the elaboration of the homepage, the artists page, the reviews page, and I made the sequencer you can find on "Let's rock "!
+                 
               </p>
           </div>
           
