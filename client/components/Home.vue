@@ -12,19 +12,22 @@
       
       <div class="spot" id="P1">
           <div id="circle">
-              <p id = textCircle>BAND OF THE DAY </p>
+              <p id="textCircle">BAND OF THE DAY </p>
               <div id = "imgArticle"><img src = "img/Plus1.png" onclick="expand()"></div>
           </div>
           <div id="art">
               <div id ="artPhoto">
                   <div id="article">
                       <h2 id="title">{{harttitle}}</h2>
+                      <div class="duo">
                       <p id="content"><span v-html="hartcontent"></span></p>
+                      <div id="ArticlePhoto">
+                        <img class="rellax" data-rellax-speed="0" :src="hartimage">
+                        <p id="legende">{{hartcaption}}</p>
+                      </div>
+                      </div>
                   </div>
-                  <div id="ArticlePhoto" class="rellax" data-rellax-speed="-1">
-                      <img class="rellax" data-rellax-speed="0" :src="hartimage">
-                      <p id="legende">{{hartcaption}}</p>
-                  </div>
+    
               </div>
               <div id="close" onclick="closing()"><img src = "img/Cross.png"></div>
           </div>

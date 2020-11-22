@@ -5,10 +5,10 @@
       <div id="project">
           <div class="imgAbout" ><img src = "/img/Project.jpg"></div>
           <h3 class="rellax" data-rellax-speed="0.5">The Project</h3>
-          <P>The goal of this project was to create a website. We had the choice of the subject so we decided to make a music themed website. 
+          <p>The goal of this project was to create a website. We had the choice of the subject so we decided to make a music themed website. 
               Music was a great choice as all three of us are musicians. In order to do the website, we used Github to share our code whenever we did a modification.
               We did this website in one and a half week.
-          </P>
+          </p>
       </div>
       <div id="we">
           <div id="Stan">
@@ -47,6 +47,6 @@ module.exports = {
 }
 </script>
 
-<style scoped src="/css/about.css">
+<style src="/css/about.css">
 
 </style>

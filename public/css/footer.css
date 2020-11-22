@@ -68,5 +68,10 @@ footer a:hover{
     color: rgba(149, 175, 192,1.0);
 }
 
-
+@media only screen and (max-width: 404px){
+    .footer_parts{
+        transform: scale(0.90);
+    }
+    
+}
 

@@ -6,36 +6,36 @@
             <h2>You can contact us via this form! You just need to fill it in.</h2>
             <h2>Thank you!</h2>
         </div>
+        <div class="contact">
+            <form class="form_contact"> 
+                <div class="names">
+                    <div class="name">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="Name" placeholder="Name" required>
+                    </div>
 
-        <form class="form_contact"> 
-            <div class="names">
-                <div class="name">
-                    <label for="name"></label>
-                    <input type="text" id="name" name="Name" placeholder="Name" required>
+                    <div class="surname">
+                        <label for="surname"></label>
+                        <input type="text" id="surname" name="Surname" placeholder="Surname" required>
+                    </div>
+                    <div class="email">
+                        <label for="email"></label>
+                        <input type="email" id="email" name="Email" placeholder="Your e-mail" required>
+                    </div>
+                </div>  
+                    
+                    <div class="subject">
+                        <label for="subject"></label>
+                        <input type="text" id="subject" name="sname" placeholder="Subject of the e-mail">
+                    </div>
+                    <div class="message">
+                        <textarea name="message" id="message_content" cols="30" rows="10" placeholder="Type your message here..." maxlength="300"></textarea>
+                    </div>      
+                <div class="button_line">
+                    <button type="button" class="d_button" id="d_button1" onclick="submit_form();"></button>
                 </div>
-
-                <div class="surname">
-                    <label for="surname"></label>
-                    <input type="text" id="surname" name="Surname" placeholder="Surname" required>
-                </div>
-                <div class="email">
-                    <label for="email"></label>
-                    <input type="email" id="email" name="Email" placeholder="Your e-mail" required>
-                </div>
-            </div>  
-                
-                <div class="subject">
-                    <label for="subject"></label>
-                    <input type="text" id="subject" name="sname" placeholder="Subject of the e-mail">
-                </div>
-                <div class="message">
-                    <textarea name="message" id="message_content" cols="30" rows="10" placeholder="Type your message here..." maxlength="300"></textarea>
-                </div>      
-            <div class="button_line">
-                <button type="button" class="d_button" id="d_button1" onclick="submit_form();"></button>
-            </div>
-        </form>
-        
+            </form>
+        </div>
     </div>
 </template>
 
@@ -58,6 +58,7 @@ module.exports = {
 }
 </script>
 
-<style scoped src="/css/contact.css">
+<style src="/css/contact.css">
+
 
 </style>

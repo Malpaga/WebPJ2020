@@ -114,3 +114,9 @@
 }
 
 
+@media only screen and (max-width: 1200px){
+    .imgAbout p{
+        margin-left: 50px;
+        padding-left: 25px;
+    }
+}

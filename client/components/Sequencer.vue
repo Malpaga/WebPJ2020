@@ -45,11 +45,11 @@
           <button type="button" class="control_button" id="gba_bt" onclick="set_gba()">🕹️</button>
           <button type="button" class="control_button" id="piano_bt" onclick="set_piano()">🎹</button>
           <div class="speed">
-              <p>Tempo</p>
-              <div class="speed_control">
-                  <input type="range" autocomplete="off" value="360" min="220" max="500" step="10" onchange="updateTempo(this.value);"> 
-              </div>
-              <input type="text" autocomplete="off" id="textInput" value="40 bpm" style="color: black;margin: 5px;text-align: center; width: 70px; height: 70px; border-radius: 20rem;">
+            <p>Tempo</p>
+            <div class="speed_control">
+                <input type="range" autocomplete="off" value="360" min="220" max="500" step="10" onchange="updateTempo(this.value);"> 
+            </div>
+            <input type="text" autocomplete="off" id="textInput" value="40 bpm" style="color: black;margin: 5px;text-align: center; width: 70px; height: 70px; border-radius: 20rem;">
               
           </div>
           

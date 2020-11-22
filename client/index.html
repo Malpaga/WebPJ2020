@@ -25,15 +25,15 @@
         
                 <nav class="menu"> 
                     <div class="nav_left" id="nl">
-                            <router-link to='/' class="nav_link">Home</router-link>
-                            <router-link to='/sequencer' class="nav_link">Let's Rock</router-link>
-                            <router-link to='/artists' class="nav_link">Artists</router-link>
-                            <router-link to='/reviews' class="nav_link">Reviews</router-link>
-                            <router-link to='/contact' class="nav_link">Contact Us</router-link>
-                            <router-link to='/about' class="nav_link">About Us</router-link>
+                            <router-link to="/" class="nav_link">Home</router-link>
+                            <router-link to="/sequencer" class="nav_link">Let's Rock</router-link>
+                            <router-link to="/artists" class="nav_link">Artists</router-link>
+                            <router-link to="/reviews" class="nav_link">Reviews</router-link>
+                            <router-link to="/contact" class="nav_link">Contact Us</router-link>
+                            <router-link to="/about" class="nav_link">About Us</router-link>
                             <div v-if="!islog">
-                                <router-link to='/register' class="nav_link">Sign In</router-link>
-                                <router-link to='/login' class="nav_link">Log in</router-link>
+                                <router-link to="/register" class="nav_link">Sign In</router-link>
+                                <router-link to="/login" class="nav_link">Log in</router-link>
                             </div>
                             <div class="log" v-else>
                                 <div id="one">
@@ -51,7 +51,7 @@
                     </button>
                     
                     <div class="nav_right">
-                        <h1><router-link to='/'> <div class="logo"><img  src = "/img/outmos.png" class="image" /></div></router-link></h1>
+                        <h1><router-link to="/"> <div class="logo"><img  src = "/img/outmos.png" class="image" /></div></router-link></h1>
                     </div>
                     
                 </nav>
@@ -77,36 +77,36 @@
                 ></router-view>
             </main>
             
-            <footer class = footer>
-                <div class = footer_parts>
-                    <div id = pages>
+            <footer class="footer">
+                <div class="footer_parts">
+                    <div id="pages">
                         <h2>OUR PAGES</h2>
-                        <div id = liste_pages>
+                        <div id="liste_pages">
                             <ul>
-                                <li><router-link to='/' href="index.html">Home page</router-link></li>
-                                <li><router-link to='/sequencer' href="sequencer.html">Let's Rock!</router-link></li>
-                                <li><router-link to='/artists' href="artists.html">Artists</router-link></li>
-                                <li><router-link to='/reviews' href="reviews.html">Our reviews</router-link></li>
+                                <li><router-link to="/" href="index.html">Home page</router-link></li>
+                                <li><router-link to="/sequencer" href="sequencer.html">Let's Rock!</router-link></li>
+                                <li><router-link to="/artists" href="artists.html">Artists</router-link></li>
+                                <li><router-link to="/reviews" href="reviews.html">Our reviews</router-link></li>
                             </ul>
                         </div>
                     </div>
-                    <div id = us>
+                    <div id="us">
                         <h2>ABOUT</h2>
-                        <div id = liste_us>
+                        <div id="liste_us">
                             <ul>
-                                <li><router-link to='/about' href="about.html">Want to know us better ?</router-link></li>
-                                <li><router-link to='/credits' href="credits.html">The credits</router-link></li>
+                                <li><router-link to="/about" href="about.html">Want to know us better ?</router-link></li>
+                                <li><router-link to="/credits" href="credits.html">The credits</router-link></li>
                             </ul>
                         </div>
                     </div>
-                    <div id = sociaux>
+                    <div id="sociaux">
                         <h2>CONTACT</h2>
-                        <div id = contact>
-                            <router-link to='/contact' href="contact.html">Contact us</router-link>
+                        <div id="contact">
+                            <router-link to="/contact" href="contact.html">Contact us</router-link>
                             <div>
-                                <a href="https://www.facebook.com/Outmos-106783571067258"><img src = "/img/Facebook.png" class = logos></a>
-                                <a href="https://twitter.com/Outmos1"><img src = "/img/Twitter.png" class = logos></a>
-                                <a href="https://www.instagram.com/outmos_/"><img src = "/img/Instagram.png" class = logos></a>
+                                <a href="https://www.facebook.com/Outmos-106783571067258"><img src = "/img/Facebook.png" class="logos"></a>
+                                <a href="https://twitter.com/Outmos1"><img src = "/img/Twitter.png" class="logos"></a>
+                                <a href="https://www.instagram.com/outmos_/"><img src = "/img/Instagram.png" class="logos"></a>
                             </div>
                             <ul>
                                 <li>Adress: 30/32 Avenue de la République, 94800 Villejuif.</li>

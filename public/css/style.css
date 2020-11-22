@@ -95,7 +95,6 @@ h3{
 .spot{
     width: 100%;
     padding-top: 80px;
-    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,20 +208,25 @@ h2{
 #art div, #art h2, #art{
     transition: all 1s ease-in-out;
 }
-
 #artPhoto #content{
     font-size: 20px;
     font-family: 'LemonMilk';
+    width: 800px;
+    text-align: justify;
 }
 #art p{
     margin-left: 20px;
+    margin-right: 10px;
 }
-
+#artPhoto{
+    display: flex;
+    flex-flow: column;
+}
 #ArticlePhoto{
     z-index: 4;
     width: 30%;
     height: 30vw;
-    margin-right: 50px;
+    margin: 25px 45px 0 20px;
     background-color: #FDD692;
     display: flex;
     justify-content: center;
@@ -269,10 +273,8 @@ h2{
 }
 
 #article{
-    width: 50%;
+    width: 100%;
 }
-
-
 
 @media only screen and (max-width: 1050px){
     .seq-link{
@@ -287,6 +289,11 @@ h2{
         background-size: 200%;
         border-radius: 10rem;
         transition: background-position 1s ease-in-out;
+        justify-content: center;
+    }
+    .seq-arrow img{
+        height: 50px;
+        width: 50px;
     }
     .seq-arrow:hover{
         background-position: -100%;
@@ -475,7 +482,11 @@ h2{
     font-size: 250%;
     transition: all 0.3s linear;
 }
-
+.duo{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
 @media only screen and (max-width: 450px){
     .lArrow
     {
@@ -499,7 +510,16 @@ h2{
         flex-flow: row wrap;
         justify-content: center;
     }
-    
+    .duo{
+        flex-flow: row wrap;
+    }
+    #ArticlePhoto{
+        height: 300px;
+        width: 300px;
+    }
+    .title{
+        font-size: 40px;
+    }
 }
 
 @media only screen and (max-width: 404px){
@@ -520,6 +540,9 @@ h2{
     .albumphoto{
         width: 250px;
         height: 250px;
+    }
+    .welcome-title{
+        font-size: 60px;
     }
     
 }
