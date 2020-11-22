@@ -27,17 +27,14 @@
 }
 
 #about img{
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
-    margin-top: 25px;
-    margin-bottom: 20px;
+    width: 400px;
+    height: 400px;
+    margin: 25px 0 20px 0;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.664);
 }
-
 .imgAbout{
-    width: 40%;
-    height: auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #about h3{
@@ -68,8 +65,7 @@
 
 #project{
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
+    flex-flow: row-reverse wrap;
     justify-content: space-between;
     margin-top: 50px;
     margin-left: 25px;
@@ -97,21 +93,6 @@
     margin-left: 25px;
 }
 
-#school h3{
-    margin-left: -30px;
-}
-
-#Stan h3{
-    margin-left: -200px;
-}
-
-#project h3{
-    margin-right: -50px;
-}
-
-#Philippe h3{
-    margin-right: -150px;
-}
 
 
 @media only screen and (max-width: 1200px){
